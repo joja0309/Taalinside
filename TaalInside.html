@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nederlandse Grammatica HAVO — Zindelen & Woordsoorten</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1209;
+    --paper: #faf6ef;
+    --cream: #f2ead8;
+    --accent: #c0392b;
+    --gold: #d4a017;
+    --blue: #1a4480;
+    --green: #1a6b3a;
+    --mid: #7a6a58;
+    --light: #e8dfc8;
+    --shadow: rgba(26,18,9,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--ink);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .nav-brand {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-right: 1px solid #333;
+    white-space: nowrap;
+  }
+  .nav-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tab {
+    color: #aaa;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    border: none;
+    background: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .nav-tab:hover { color: #fff; }
+  .nav-tab.active { color: var(--gold); }
+  .nav-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    padding: 60px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(192,57,43,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(26,68,128,0.15) 0%, transparent 60%);
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    color: #fff;
+    line-height: 1.1;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  .hero-title em {
+    color: var(--gold);
+    font-style: normal;
+  }
+  .hero-sub {
+    color: #888;
+    font-size: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    position: relative;
+  }
+  .hero-badges {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .badge {
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+  }
+  .badge-theorie { background: rgba(26,68,128,0.2); color: #7aa4d8; border-color: #1a4480; }
+  .badge-quiz    { background: rgba(26,107,58,0.2); color: #7ad8a4; border-color: #1a6b3a; }
+  .badge-escape  { background: rgba(192,57,43,0.2); color: #d87a7a; border-color: #c0392b; }
+  .badge-flash   { background: rgba(212,160,23,0.2); color: #d8c07a; border-color: #d4a017; }
+  .badge:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+  /* SECTIONS */
+  .section { display: none; max-width: 1000px; margin: 0 auto; padding: 40px 24px 80px; }
+  .section.active { display: block; }
+
+  /* THEORIE */
+  .chapter-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .ch-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: var(--cream);
+    border: 2px solid var(--light);
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--mid);
+    transition: all 0.2s;
+  }
+  .ch-btn:hover, .ch-btn.active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+  .theory-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 36px 40px;
+    box-shadow: 0 2px 20px var(--shadow);
+    border-left: 5px solid var(--blue);
+    margin-bottom: 24px;
+    animation: fadeUp 0.4s ease;
+  }
+  .theory-card.ws { border-left-color: var(--green); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  .theory-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--blue);
+    margin-bottom: 4px;
+  }
+  .theory-card.ws h2 { color: var(--green); }
+  .theory-card .label {
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+  .theory-card p, .theory-card li {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .theory-card ul { padding-left: 20px; }
+  .theory-card .example {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-style: italic;
+    border-left: 3px solid var(--gold);
+    font-size: 0.95rem;
+  }
+  .theory-card .tip {
+    background: #e8f0fa;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-left: 3px solid var(--blue);
+    font-size: 0.9rem;
+  }
+  .theory-card .tip strong { color: var(--blue); }
+  .theory-card .steps {
+    counter-reset: step;
+    padding: 0;
+    list-style: none;
+  }
+  .theory-card .steps li {
+    counter-increment: step;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  .theory-card .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 26px;
+    height: 26px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .theory-card.ws .steps li::before { background: var(--green); }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    margin: 2px;
+  }
+  .tag-zd { background: #dbe8f8; color: var(--blue); }
+  .tag-ws { background: #dbf0e4; color: var(--green); }
+
+  table.grammar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 16px 0;
+  }
+  table.grammar-table th {
+    background: var(--blue);
+    color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .theory-card.ws table.grammar-table th { background: var(--green); }
+  table.grammar-table td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--light);
+    vertical-align: top;
+  }
+  table.grammar-table tr:nth-child(even) td { background: var(--cream); }
+
+  /* QUIZ */
+  .quiz-container { max-width: 700px; margin: 0 auto; }
+  .quiz-progress {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--mid);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--light);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+  .quiz-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 36px;
+    box-shadow: 0 4px 24px var(--shadow);
+    animation: fadeUp 0.3s ease;
+  }
+  .quiz-cat {
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .quiz-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .quiz-sentence {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-style: italic;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--gold);
+    font-size: 1rem;
+  }
+  .quiz-options { display: flex; flex-direction: column; gap: 10px; }
+  .quiz-opt {
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 2px solid var(--light);
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: all 0.2s;
+    font-family: 'Source Serif 4', serif;
+    color: var(--ink);
+  }
+  .quiz-opt:hover { border-color: var(--blue); background: #f0f5fc; }
+  .quiz-opt.correct { background: #d4f0e0; border-color: var(--green); color: var(--green); }
+  .quiz-opt.wrong { background: #f8e0dc; border-color: var(--accent); color: var(--accent); }
+  .quiz-feedback {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .quiz-feedback.show { display: block; }
+  .quiz-feedback.ok { background: #d4f0e0; color: #155724; }
+  .quiz-feedback.nope { background: #f8e0dc; color: #721c24; }
+  .quiz-actions { margin-top: 20px; display: flex; gap: 10px; }
+  .btn {
+    padding: 11px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-primary:hover { background: #0f2d5a; }
+  .btn-secondary { background: var(--cream); color: var(--ink); border: 2px solid var(--light); }
+  .btn-secondary:hover { background: var(--light); }
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-green:hover { background: #0f4025; }
+  .quiz-score {
+    text-align: center;
+    padding: 60px 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px var(--shadow);
+    display: none;
+  }
+  .score-emoji { font-size: 4rem; margin-bottom: 16px; }
+  .score-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--blue);
+    margin-bottom: 8px;
+  }
+  .score-msg { font-size: 1.1rem; color: var(--mid); margin-bottom: 24px; }
+  .quiz-topic-select {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .topic-btn {
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 2px solid var(--light);
+    background: #fff;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--mid);
+    transition: all 0.2s;
+  }
+  .topic-btn.active-zd { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .topic-btn.active-ws { background: var(--green); border-color: var(--green); color: #fff; }
+  .topic-btn:hover { border-color: var(--blue); }
+
+  /* ESCAPE ROOM */
+  .escape-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .escape-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .escape-header p { color: var(--mid); }
+  .escape-rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .room-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 16px var(--shadow);
+    cursor: pointer;
+    transition: all 0.25s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  .room-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .room-card.zd::before { background: var(--blue); }
+  .room-card.ws::before { background: var(--green); }
+  .room-card.mixed::before { background: linear-gradient(90deg, var(--blue), var(--green)); }
+  .room-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px var(--shadow); border-color: var(--light); }
+  .room-card .room-icon { font-size: 2.5rem; margin-bottom: 12px; }
+  .room-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 6px; }
+  .room-card p { font-size: 0.85rem; color: var(--mid); line-height: 1.5; }
+  .room-card .room-meta {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .room-locked {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--mid);
+  }
+
+  /* Active escape room */
+  .escape-game { display: none; }
+  .escape-game.active { display: block; }
+  .escape-back { margin-bottom: 20px; }
+  .escape-puzzle {
+    background: var(--ink);
+    color: #eee;
+    border-radius: 12px;
+    padding: 36px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .puzzle-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+  .puzzle-story {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  .puzzle-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .puzzle-sentence {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-style: italic;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--gold);
+  }
+  .puzzle-options { display: flex; flex-direction: column; gap: 10px; }
+  .puzzle-opt {
+    padding: 13px 18px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 2px solid rgba(255,255,255,0.15);
+    color: #ddd;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: all 0.2s;
+  }
+  .puzzle-opt:hover { background: rgba(255,255,255,0.13); border-color: var(--gold); color: #fff; }
+  .puzzle-opt.correct { background: rgba(26,107,58,0.3); border-color: var(--green); color: #7aff9a; }
+  .puzzle-opt.wrong { background: rgba(192,57,43,0.3); border-color: var(--accent); color: #ff9a7a; }
+  .puzzle-feedback {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    display: none;
+  }
+  .puzzle-feedback.show { display: block; }
+  .puzzle-feedback.ok { background: rgba(26,107,58,0.25); color: #7aff9a; }
+  .puzzle-feedback.nope { background: rgba(192,57,43,0.25); color: #ff9a7a; }
+  .escape-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  .escape-prog-label { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--mid); white-space: nowrap; }
+  .escape-keys { display: flex; gap: 6px; }
+  .key-icon { font-size: 1.2rem; }
+  .key-icon.earned { filter: none; }
+  .key-icon.locked { filter: grayscale(1) opacity(0.3); }
+  .escape-complete {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--ink), #2a1a09);
+    border-radius: 12px;
+    color: #fff;
+    display: none;
+  }
+  .escape-complete.show { display: block; }
+  .escape-complete h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold); margin-bottom: 16px; }
+  .escape-complete p { color: #aaa; font-size: 1rem; margin-bottom: 24px; }
+
+  /* FLASHCARDS */
+  .flash-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .flash-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--mid);
+    margin-left: auto;
+  }
+  .flashcard-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .flashcard {
+    width: 100%;
+    max-width: 560px;
+    height: 280px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin-bottom: 28px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s ease;
+  }
+  .flashcard.flipped .card-inner { transform: rotateY(180deg); }
+  .card-front, .card-back {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: center;
+  }
+  .card-front {
+    background: #fff;
+    box-shadow: 0 8px 40px var(--shadow);
+    border: 2px solid var(--light);
+  }
+  .card-back {
+    background: var(--ink);
+    color: #fff;
+    transform: rotateY(180deg);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+  .card-front .card-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--mid);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+  .card-front .card-term {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .card-front .card-hint {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--mid);
+    font-style: italic;
+  }
+  .card-back .card-def {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 12px;
+  }
+  .card-back .card-ex {
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.88rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 12px;
+    width: 100%;
+  }
+  .flash-nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .flash-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+    background: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+  }
+  .flash-nav-btn:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .flash-counter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    color: var(--mid);
+    min-width: 60px;
+    text-align: center;
+  }
+  .flash-flip-hint {
+    font-size: 0.78rem;
+    color: var(--mid);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.06em;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  .section-sub {
+    font-size: 0.88rem;
+    color: var(--mid);
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 32px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">🎓 Grammatica HAVO</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('theorie')">📖 Theorie</button>
+      <button class="nav-tab" onclick="showSection('quiz')">✏️ Oefentoets</button>
+      <button class="nav-tab" onclick="showSection('escape')">🔒 Escaperoom</button>
+      <button class="nav-tab" onclick="showSection('flash')">⚡ Flitskaartjes</button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1 class="hero-title">Zindelen & <em>Woordsoorten</em></h1>
+  <p class="hero-sub">HAVO — Nederlandse Grammatica</p>
+  <div class="hero-badges">
+    <span class="badge badge-theorie" onclick="showSection('theorie')">📖 Theorie</span>
+    <span class="badge badge-quiz" onclick="showSection('quiz')">✏️ Oefentoets</span>
+    <span class="badge badge-escape" onclick="showSection('escape')">🔒 Escaperoom</span>
+    <span class="badge badge-flash" onclick="showSection('flash')">⚡ Flitskaartjes</span>
+  </div>
+</div>
+
+<!-- ===================== THEORIE ===================== -->
+<div id="sec-theorie" class="section active">
+  <h1 class="section-title">Theorie</h1>
+  <p class="section-sub">Klik op een paragraaf om de stof te bestuderen</p>
+
+  <div class="chapter-nav">
+    <button class="ch-btn active" onclick="showChapter('zd3', this)">§3 Naamw. gezegde</button>
+    <button class="ch-btn" onclick="showChapter('zd5', this)">§5 Ww./Nw. gezegde</button>
+    <button class="ch-btn" onclick="showChapter('zd6', this)">§6 Meew. voorwerp</button>
+    <button class="ch-btn" onclick="showChapter('zd8', this)">§8 Bijw. bepaling</button>
+    <button class="ch-btn" onclick="showChapter('zd7', this)">§7 Bijv. bepaling</button>
+    <button class="ch-btn" onclick="showChapter('zd9', this)">§9 Samengest. zin</button>
+    <button class="ch-btn" onclick="showChapter('zd11', this)">§11 Zinsdeelzinnen</button>
+    <button class="ch-btn" onclick="showChapter('zd13', this)">§13 Bijv. bijzin</button>
+    <button class="ch-btn" onclick="showChapter('ws4', this)">§4 Aanw./Vr. vnw</button>
+    <button class="ch-btn" onclick="showChapter('ws5', this)">§5 Pers./Bez. vnw</button>
+    <button class="ch-btn" onclick="showChapter('ws6', this)">§6 Zww/Kww/Hww</button>
+    <button class="ch-btn" onclick="showChapter('ws8', this)">§8 Telwoord</button>
+    <button class="ch-btn" onclick="showChapter('ws10', this)">§10 Voegwoord</button>
+    <button class="ch-btn" onclick="showChapter('ws12', this)">§12 Ww. in sameng. zin</button>
+    <button class="ch-btn" onclick="showChapter('ws14', this)">§14 Betr. vnw</button>
+  </div>
+
+  <div id="ch-zd3" class="theory-card">
+    <div class="label"><span class="tag tag-zd">Zindelen §3</span></div>
+    <h2>Naamwoordelijk gezegde (ng)</h2>
+    <p>Het <strong>naamwoordelijk gezegde</strong> zegt wat iemand of iets <em>is</em>, <em>wordt</em> of <em>blijft</em>. Het bestaat uit een <strong>werkwoordelijk deel</strong> (koppelwerkwoord) en een <strong>naamwoordelijk deel</strong> (zn. of bn.).</p>
+    <div class="example">🚂 <em>Dit jaar is Alinde opnieuw keepster.</em><br>ng = is [keepster]</div>
+    <p><strong>Koppelwerkwoorden:</strong> zijn, worden, blijven, blijken, lijken, schijnen</p>
+    <div class="tip"><strong>Let op:</strong> In zinnen met een naamwoordelijk gezegde staat nooit een lijdend voorwerp.</div>
+    <p><strong>Stappenplan:</strong></p>
+    <ol class="steps">
+      <li>Stel vast: doet het onderwerp iets (wg) of ís het iets (ng)?</li>
+      <li>Als het iets ís: vraag <em>Wat + pv + onderwerp + overige ww?</em></li>
+      <li>Noteer: pv + [nw.deel] + overige werkwoorden</li>
+    </ol>
+    <div class="example">🎮 Thymen zal de beste gamer blijken.<br>Wat zal Thymen blijken? → <em>de beste gamer</em><br>ng = zal [de beste gamer] blijken</div>
+  </div>
+
+  <div id="ch-zd5" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §5</span></div>
+    <h2>Werkwoordelijk of naamwoordelijk gezegde</h2>
+    <p>Er zijn twee soorten gezegdes:</p>
+    <p><strong>Werkwoordelijk gezegde (wg):</strong> het onderwerp <em>doet</em> iets. Gebruik een zelfstandig werkwoord.<br>
+    <strong>Naamwoordelijk gezegde (ng):</strong> het onderwerp <em>is</em> iets. Gebruik een koppelwerkwoord + naamwoordelijk deel.</p>
+    <div class="example">
+      ✅ wg: <em>Said spaart voor de nieuwste iPhone.</em> — spaart = zww<br>
+      ✅ ng: <em>Lyana is bevriend met Kate.</em> — ng = is [bevriend met Kate]
+    </div>
+    <div class="tip"><strong>Stappenplan:</strong><br>
+      1. Doet het onderwerp iets? → werkwoordelijk gezegde<br>
+      2. Is/wordt/blijft het onderwerp iets? → naamwoordelijk gezegde<br>
+      3. Bevat het gezegde een koppelwerkwoord? → naamwoordelijk gezegde
+    </div>
+  </div>
+
+  <div id="ch-zd6" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §6</span></div>
+    <h2>Meewerkend voorwerp (mv)</h2>
+    <p>Het <strong>meewerkend voorwerp</strong> geeft aan <em>voor wie</em> iets bestemd is. Het staat bij werkwoorden als <em>geven, vertellen, beloven, uitleggen, overhandigen, betalen</em>.</p>
+    <div class="example">📬 <em>Heeft Aleph aan zijn broer een geheimpje verteld?</em><br>mv = aan zijn broer</div>
+    <div class="tip"><strong>Tip:</strong> Begin het mv met 'aan' of probeer 'aan' ervoor te zetten. Dat lukt bijna altijd!</div>
+    <ol class="steps">
+      <li>Zoek pv en verdeel de zin in zinsdelen</li>
+      <li>Noteer onderwerp, gezegde en lijdend voorwerp</li>
+      <li>Vraag: <em>Aan wie + wg + ow + lv?</em></li>
+      <li>Controleer: kun je 'aan' weglaten of toevoegen?</li>
+    </ol>
+  </div>
+
+  <div id="ch-zd8" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §8</span></div>
+    <h2>Bijwoordelijke bepaling (bwb)</h2>
+    <p>Een <strong>bijwoordelijke bepaling</strong> geeft antwoord op: <em>Waar? Waarheen? Waarom? Waardoor? Wanneer? Hoe? Van wie?</em></p>
+    <div class="example">
+      🏪 <em>Op de markt</em> hebben we een verse stroopwafel gekocht. → Waar?<br>
+      ⏰ De supermarkt sluit <em>om acht uur</em>. → Wanneer?<br>
+      🏙️ Deze band komt <em>uit Eindhoven</em>. → Waarvandaan?
+    </div>
+    <div class="tip"><strong>Let op:</strong> Woorden als <em>niet, misschien, natuurlijk</em> zijn ook bijwoordelijke bepalingen!</div>
+    <p>Na het noteren van pv, ow, wg, lv en mv zijn de overige zinsdelen (bijna altijd) bijwoordelijke bepalingen.</p>
+  </div>
+
+  <div id="ch-zd7" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §7</span></div>
+    <h2>Bijvoeglijke bepaling (bijv.bep)</h2>
+    <p>Een <strong>bijvoeglijke bepaling</strong> geeft <em>binnen een zinsdeel</em> extra informatie over de <strong>kern</strong> (een zn. of vnw.).</p>
+    <div class="example">🎼 <em>De <strong>oude, succesvolle</strong> dirigent ontving een <strong>daverend</strong> applaus.</em><br>
+      bijv.bep = oude → dirigent<br>
+      bijv.bep = succesvolle → dirigent<br>
+      bijv.bep = daverend → applaus</div>
+    <div class="tip"><strong>Let op:</strong> Lidwoorden (de/het/een), voornaamwoorden en telwoorden zijn <em>geen</em> bijvoeglijke bepaling.</div>
+    <ol class="steps">
+      <li>Zet streepjes tussen de zinsdelen</li>
+      <li>Zoek per zinsdeel de kern (zn. of vnw.)</li>
+      <li>Noteer de woorden die extra info over de kern geven: bijv.bep = … → kern</li>
+    </ol>
+  </div>
+
+  <div id="ch-zd9" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §9</span></div>
+    <h2>Samengestelde zin</h2>
+    <p>Een <strong>enkelvoudige zin</strong> heeft één persoonsvorm. Een <strong>samengestelde zin</strong> heeft meerdere persoonsvormen.</p>
+    <table class="grammar-table">
+      <tr><th>Hoofdzin</th><th>Bijzin</th></tr>
+      <tr><td>Ow. en pv. staan naast elkaar</td><td>Andere zinsdelen kunnen ertussen staan</td></tr>
+      <tr><td>Pv. staat vooraan (1e of 2e zinsdeel)</td><td>Pv. staat vaak achteraan</td></tr>
+    </table>
+    <div class="example">
+      🔗 Twee hoofdzinnen: <em>{Said spaart}, want {hij heeft genoeg geld}.</em><br>
+      🔗 Hoofdzin + bijzin: <em>{(Omdat hij spaart), koopt Said een iPhone}.</em>
+    </div>
+  </div>
+
+  <div id="ch-zd11" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §11</span></div>
+    <h2>Alle zinsdeelzinnen</h2>
+    <p>Een <strong>zinsdeelzin</strong> is een bijzin die de rol vervult van een zinsdeel binnen de hoofdzin.</p>
+    <p>Soorten zinsdeelzinnen:</p>
+    <ul>
+      <li><strong>Onderwerpszin (ow-zin):</strong> <em>(Wie zich snel opgeeft), is zeker van een plaats.</em></li>
+      <li><strong>Lijdendvoorwerpszin (lv-zin):</strong> <em>Finn verwijt zijn zus (dat ze nooit luistert).</em></li>
+      <li><strong>Meewerkendvoorwerpszin (mv-zin):</strong> <em>(Wie niet van lezen houdt), moet je geen boek geven.</em></li>
+      <li><strong>Bijwoordelijkebepalingszin (bwb-zin):</strong> <em>(Wanneer het vriest), is erwtensoep lekker.</em></li>
+    </ul>
+    <ol class="steps">
+      <li>Maak de zin vragend: de hoofdzin staat dan vooraan</li>
+      <li>Geef begin en einde van de bijzin aan</li>
+      <li>Vul in de hz. een woordgroep in voor de bijzin</li>
+      <li>Ontleed de hz. en bepaal het zinsdeel van die woordgroep</li>
+    </ol>
+  </div>
+
+  <div id="ch-zd13" class="theory-card" style="display:none">
+    <div class="label"><span class="tag tag-zd">Zindelen §13</span></div>
+    <h2>Bijvoeglijke bijzin (bijv.bijzin)</h2>
+    <p>Een <strong>bijvoeglijke bijzin</strong> is een bijvoeglijke bepaling die een persoonsvorm bevat. Ze hoort bij een zn. of vnw. (de kern).</p>
+    <div class="example">🗽 <em>Het standbeeld, (dat van brons is gemaakt), krijgt een plek in het Stadspark.</em><br>bijv.bijzin = dat van brons is gemaakt → standbeeld</div>
+    <p><strong>Herkenning:</strong></p>
+    <ul>
+      <li>Begint vaak met <em>die</em> of <em>dat</em></li>
+      <li>Staat direct achter de kern</li>
+      <li>Heeft een persoonsvorm</li>
+      <li>Kun je meestal weglaten</li>
+      <li>Is onderdeel van een zinsdeel (zinsdeelstuk)</li>
+    </ul>
+  </div>
+
+  <div id="ch-ws4" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §4</span></div>
+    <h2>Aanwijzend en vragend voornaamwoord</h2>
+    <p><strong>Aanwijzend voornaamwoord (aanw.vnw)</strong> wijst een mens, dier of ding aan:</p>
+    <p>deze, die, dat, dit, zulk(e), zo'n, dergelijk(e), zelf, hetzelfde, dezelfde</p>
+    <div class="example">👆 <em>Deze rugzak vind ik handiger dan dat koffertje.</em></div>
+    <div class="tip"><strong>Test:</strong> Kan je het vervangen door <em>dit/deze</em>? Dan is het aanwijzend vnw.</div>
+    <p><strong>Vragend voornaamwoord (vr.vnw)</strong>: wie, wat, welk(e), wat voor (een)</p>
+    <div class="example">❓ <em>Welke sport beoefen jij? Wat vind je daar leuk aan?</em></div>
+    <div class="tip"><strong>Let op:</strong> <em>wie</em> en <em>wat</em> zijn geen vragend vnw als ze terugwijzen naar een eerder woord.</div>
+  </div>
+
+  <div id="ch-ws5" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §5</span></div>
+    <h2>Persoonlijk en bezittelijk voornaamwoord</h2>
+    <p><strong>Persoonlijk voornaamwoord (pers.vnw)</strong>: verwijst naar persoon, dier of ding.</p>
+    <p><strong>Bezittelijk voornaamwoord (bez.vnw)</strong>: geeft aan van wie iets is. Staat altijd vóór een zn.</p>
+    <table class="grammar-table">
+      <tr><th></th><th>Pers.vnw (ow)</th><th>Pers.vnw (geen ow)</th><th>Bez.vnw</th></tr>
+      <tr><td><strong>Enkelvoud</strong></td><td>ik / jij/je / u / hij / zij/ze / het</td><td>mij/me / jou/je / u / hem / haar / het</td><td>mijn / jouw/je / uw / zijn / haar / zijn</td></tr>
+      <tr><td><strong>Meervoud</strong></td><td>wij/we / jullie / zij/ze</td><td>ons / jullie / hun/hen/ze</td><td>ons/onze / jullie / hun</td></tr>
+    </table>
+    <div class="example">🐾 <em>Sam en Felicia laten ze uit. Zij laten ze uit in het park bij hun huis.</em></div>
+  </div>
+
+  <div id="ch-ws6" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §6</span></div>
+    <h2>Zelfstandig, koppel- en hulpwerkwoord</h2>
+    <p><strong>Zelfstandig werkwoord (zww):</strong> zegt wat iemand doet of overkomt. Staat in werkwoordelijk gezegde.</p>
+    <p><strong>Koppelwerkwoord (kww):</strong> koppelt een eigenschap aan het onderwerp. Staat in naamwoordelijk gezegde. (zijn, worden, blijven, blijken, lijken, schijnen)</p>
+    <p><strong>Hulpwerkwoord (hww):</strong> 'helpt' het gezegde maken. Staat als persoonsvorm bij meer dan één werkwoord.</p>
+    <div class="example">
+      🎣 <em>Daley vist op de Linge.</em> — vist = zww<br>
+      🧩 <em>Opgaven zijn moeilijk.</em> — zijn = kww<br>
+      🕹️ <em>Je zou me even kunnen helpen.</em> — zou = hww, kunnen = hww, helpen = zww
+    </div>
+    <div class="tip"><strong>Tip:</strong> Als <em>zijn</em> of <em>blijven</em> aangeeft <em>waar</em> iemand is, dan is het een zww: <em>De kinderen zijn in het zwembad.</em></div>
+  </div>
+
+  <div id="ch-ws8" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §8</span></div>
+    <h2>Telwoord</h2>
+    <p>Telwoorden geven een hoeveelheid of volgorde aan. Er zijn vier soorten:</p>
+    <table class="grammar-table">
+      <tr><th></th><th>Bepaald</th><th>Onbepaald</th></tr>
+      <tr><td><strong>Hoofdtelwoord</strong></td><td>vier, zestien, een derde, 2022</td><td>veel/vele, enkele, sommige, weinig(e), wat</td></tr>
+      <tr><td><strong>Rangtelwoord</strong></td><td>tweede, achtste, twaalfde</td><td>laatste, middelste, hoeveelste</td></tr>
+    </table>
+    <div class="example">🥪 <em>In de eerste pauze at Yessin drie boterhammen en wat druiven.</em><br>eerste = bep.rangtelw — drie = bep.hoofdtelw — wat = onbep.hoofdtelw</div>
+    <div class="tip"><strong>Test:</strong> Kun je het vervangen door een cijfer? Dan is het een bepaald hoofdtelwoord.</div>
+  </div>
+
+  <div id="ch-ws10" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §10</span></div>
+    <h2>Voegwoord</h2>
+    <p>Een <strong>voegwoord</strong> verbindt woorden, woordgroepen of zinnen.</p>
+    <p><strong>Nevenschikkend voegwoord (ns.vgw):</strong> verbindt twee gelijkwaardige zinsdelen of hoofdzinnen.<br>
+    Slechts 5: <em>dus, en, maar, of, want</em></p>
+    <p><strong>Onderschikkend voegwoord (os.vgw):</strong> verbindt een bijzin met een hoofdzin.<br>
+    O.a.: aangezien, als, dan, dat, doordat, hoewel, mits, nadat, of, omdat, opdat, tenzij, terwijl, toen, voordat, zodat, zodra</p>
+    <div class="example">
+      🔗 ns.vgw: <em>Een tompouce is lekker, <strong>maar</strong> dit gebakje is lastig te eten.</em><br>
+      🔗 os.vgw: <em>Het treinverkeer is ontregeld, (<strong>nadat</strong> een bevergang werd ontdekt).</em>
+    </div>
+  </div>
+
+  <div id="ch-ws12" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §12</span></div>
+    <h2>Zelfstandig, koppel- en hulpwerkwoord in samengestelde zin</h2>
+    <div class="example">🦆 <em>Katrien Duck is ziek (doordat ze iets verkeerds heeft gegeten), (zodat ze niet zal kunnen optreden).</em></div>
+    <ol class="steps">
+      <li>Verdeel de samengestelde zin in enkelvoudige zinnen</li>
+      <li>Stel van elke enkelvoudige zin het gezegde vast (wg of ng)</li>
+      <li>Pas per zin de regels van §6 toe</li>
+    </ol>
+    <div class="tip">
+      Zin 1: ng → is = kww<br>
+      Zin 2: wg met 2 ww. → heeft = hww, gegeten = zww<br>
+      Zin 3: wg met 3 ww. → zal = hww, kunnen = hww, optreden = zww
+    </div>
+  </div>
+
+  <div id="ch-ws14" class="theory-card ws" style="display:none">
+    <div class="label"><span class="tag tag-ws">Woordsoorten §14</span></div>
+    <h2>Betrekkelijk voornaamwoord (betr.vnw)</h2>
+    <p>Een <strong>betrekkelijk voornaamwoord</strong> begint een bijvoeglijke bijzin en wijst terug naar een kern (het <strong>antecedent</strong>).</p>
+    <p>Meest gebruikt: <em>die, dat, wie, wat</em></p>
+    <table class="grammar-table">
+      <tr><th>Betr.vnw</th><th>Gebruik</th><th>Voorbeeld</th></tr>
+      <tr><td>die</td><td>de-woorden</td><td>de jongen <em>die</em> daar zit</td></tr>
+      <tr><td>dat</td><td>het-woorden</td><td>het alarm <em>dat</em> piept</td></tr>
+      <tr><td>wie</td><td>personen (met vz.)</td><td>de politicus op <em>wie</em> ik stem</td></tr>
+      <tr><td>wat</td><td>alles, niets, iets, overtr. trap na 'het'</td><td>niets <em>wat</em> ik niet durf</td></tr>
+    </table>
+    <div class="tip"><strong>Test:</strong> Kun je <em>die/dat</em> vervangen door <em>deze/dit</em>? Dan is het aanwijzend vnw., niet betrekkelijk!</div>
+  </div>
+</div>
+
+<!-- ===================== QUIZ ===================== -->
+<div id="sec-quiz" class="section">
+  <h1 class="section-title">Oefentoets</h1>
+  <p class="section-sub">Test je kennis met 20 vragen over zindelen en woordsoorten</p>
+
+  <div class="quiz-topic-select">
+    <button class="topic-btn active-zd" onclick="filterQuiz('all', this)">Alles</button>
+    <button class="topic-btn" onclick="filterQuiz('zd', this)">Alleen Zindelen</button>
+    <button class="topic-btn" onclick="filterQuiz('ws', this)">Alleen Woordsoorten</button>
+  </div>
+
+  <div class="quiz-progress">
+    <span id="q-label">Vraag 1 van 20</span>
+    <div class="progress-bar"><div class="progress-fill" id="q-progress" style="width:5%"></div></div>
+    <span id="q-score-live">Score: 0</span>
+  </div>
+
+  <div id="quiz-main">
+    <div class="quiz-card" id="quiz-card">
+      <div class="quiz-cat" id="q-cat"></div>
+      <div class="quiz-q" id="q-question"></div>
+      <div class="quiz-sentence" id="q-sentence" style="display:none"></div>
+      <div class="quiz-options" id="q-options"></div>
+      <div class="quiz-feedback" id="q-feedback"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" id="q-next" onclick="nextQuestion()" style="display:none">Volgende vraag →</button>
+      </div>
+    </div>
+  </div>
+  <div class="quiz-score" id="quiz-score">
+    <div class="score-emoji" id="score-emoji">🏆</div>
+    <div class="score-num" id="score-num">0/20</div>
+    <div class="score-msg" id="score-msg"></div>
+    <button class="btn btn-green" onclick="restartQuiz()">Opnieuw beginnen 🔄</button>
+  </div>
+</div>
+
+<!-- ===================== ESCAPE ROOM ===================== -->
+<div id="sec-escape" class="section">
+  <div class="escape-header">
+    <h2 class="section-title">🔒 Grammatica Escaperoom</h2>
+    <p class="section-sub">Los de raadsels op en ontsnap uit de grammaticakamer!</p>
+  </div>
+
+  <div id="escape-lobby">
+    <div class="escape-rooms">
+      <div class="room-card zd" onclick="startRoom('zd')">
+        <div class="room-icon">🚂</div>
+        <h3>De Treinzin Kamer</h3>
+        <p>Ontcijfer de zinsdelen en vind de sleutel. Reis door de wereld van zindelen!</p>
+        <div class="room-meta">
+          <span class="badge badge-theorie" style="font-size:0.65rem">Zindelen</span>
+          <span class="badge" style="background:rgba(0,0,0,0.08);color:#666;font-size:0.65rem">5 puzzels</span>
+        </div>
+      </div>
+      <div class="room-card ws" onclick="startRoom('ws')">
+        <div class="room-icon">🔤</div>
+        <h3>Het Woordenschat Gewelf</h3>
+        <p>Herken de woordsoorten en ontsluit de geheime kluis. Wie slaagt?</p>
+        <div class="room-meta">
+          <span class="badge badge-quiz" style="font-size:0.65rem">Woordsoorten</span>
+          <span class="badge" style="background:rgba(0,0,0,0.08);color:#666;font-size:0.65rem">5 puzzels</span>
+        </div>
+      </div>
+      <div class="room-card mixed" onclick="startRoom('mixed')">
+        <div class="room-icon">⚡</div>
+        <h3>De Eindbaas Kamer</h3>
+        <p>Alles komt samen. Combineer al je kennis en ontsnap voor de tijd op is!</p>
+        <div class="room-meta">
+          <span class="badge badge-escape" style="font-size:0.65rem">Gemengd</span>
+          <span class="badge" style="background:rgba(0,0,0,0.08);color:#666;font-size:0.65rem">6 puzzels</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="escape-game" class="escape-game">
+    <div class="escape-back">
+      <button class="btn btn-secondary" onclick="exitRoom()">← Terug naar kamers</button>
+    </div>
+    <div class="escape-progress-row">
+      <span class="escape-prog-label" id="room-name-label">Kamer</span>
+      <div class="escape-keys" id="escape-keys"></div>
+      <span class="escape-prog-label" id="puzzle-counter">Puzzel 1/5</span>
+    </div>
+    <div class="escape-puzzle" id="escape-puzzle-box">
+      <div class="puzzle-title" id="puzzle-title"></div>
+      <div class="puzzle-story" id="puzzle-story"></div>
+      <div class="puzzle-question" id="puzzle-q"></div>
+      <div class="puzzle-sentence" id="puzzle-sent" style="display:none"></div>
+      <div class="puzzle-options" id="puzzle-opts"></div>
+      <div class="puzzle-feedback" id="puzzle-fb"></div>
+      <div style="margin-top:18px" id="puzzle-next-wrap" style="display:none">
+        <button class="btn btn-primary" id="puzzle-next-btn" onclick="nextPuzzle()" style="display:none">Volgende puzzel 🔓</button>
+      </div>
+    </div>
+    <div class="escape-complete" id="escape-complete">
+      <h2>🎉 Ontsnapt!</h2>
+      <p id="escape-complete-msg">Je hebt alle puzzels opgelost en bent ontsnapt!</p>
+      <button class="btn btn-green" onclick="exitRoom()">Andere kamer proberen</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FLITSKAARTJES ===================== -->
+<div id="sec-flash" class="section">
+  <h1 class="section-title">⚡ Flitskaartjes</h1>
+  <p class="section-sub">Klik op een kaartje om de definitie te zien</p>
+
+  <div class="flash-controls">
+    <button class="topic-btn active-zd" onclick="filterFlash('all', this)">Alles</button>
+    <button class="topic-btn" onclick="filterFlash('zd', this)">Zindelen</button>
+    <button class="topic-btn" onclick="filterFlash('ws', this)">Woordsoorten</button>
+    <button class="btn btn-secondary" onclick="shuffleFlash()">🔀 Schudden</button>
+    <span class="flash-count" id="flash-count"></span>
+  </div>
+
+  <div class="flashcard-area">
+    <div class="flashcard" id="flashcard" onclick="flipCard()">
+      <div class="card-inner" id="card-inner">
+        <div class="card-front">
+          <div class="card-cat" id="fc-cat"></div>
+          <div class="card-term" id="fc-term"></div>
+          <div class="card-hint">Klik om de definitie te zien</div>
+        </div>
+        <div class="card-back">
+          <div class="card-def" id="fc-def"></div>
+          <div class="card-ex" id="fc-ex"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flash-flip-hint">👆 Klik om te draaien</div>
+    <div class="flash-nav" style="margin-top:20px">
+      <button class="flash-nav-btn" onclick="prevCard()">←</button>
+      <span class="flash-counter" id="flash-counter">1 / 20</span>
+      <button class="flash-nav-btn" onclick="nextCard()">→</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== NAVIGATION =====
+function showSection(name) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('sec-' + name).classList.add('active');
+  const tabs = document.querySelectorAll('.nav-tab');
+  const names = ['theorie','quiz','escape','flash'];
+  tabs[names.indexOf(name)].classList.add('active');
+}
+
+// ===== THEORIE =====
+function showChapter(id, btn) {
+  document.querySelectorAll('.theory-card').forEach(c => c.style.display = 'none');
+  document.querySelectorAll('.ch-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('ch-' + id).style.display = 'block';
+  btn.classList.add('active');
+}
+
+// ===== QUIZ DATA =====
+const allQuestions = [
+  { cat: 'Zindelen §3', type: 'zd', q: 'Welk zinsdeel heeft de zin hieronder?', s: 'Alinde is opnieuw keepster.', opts: ['Werkwoordelijk gezegde', 'Naamwoordelijk gezegde', 'Meewerkend voorwerp', 'Bijwoord. bepaling'], correct: 1, explain: 'Het onderwerp (Alinde) ís iets (keepster). Er staat een koppelwerkwoord (is). Dit is een naamwoordelijk gezegde: ng = is [keepster].' },
+  { cat: 'Zindelen §3', type: 'zd', q: 'Wat is het naamwoordelijk deel in de zin?', s: 'Thymen zal de beste gamer blijken.', opts: ['Thymen', 'zal blijken', 'de beste gamer', 'op het toernooi'], correct: 2, explain: 'Vraag: Wat zal Thymen blijken? Antwoord: de beste gamer. Dit is het naamwoordelijk deel.' },
+  { cat: 'Zindelen §5', type: 'zd', q: 'Welk gezegde heeft deze zin?', s: 'Said spaart voor de nieuwste iPhone.', opts: ['Naamwoordelijk gezegde', 'Werkwoordelijk gezegde', 'Bijvoeglijk gezegde', 'Samengesteld gezegde'], correct: 1, explain: 'Said doet iets: hij spaart. Dit is een werkwoordelijk gezegde. Er staat een zelfstandig werkwoord.' },
+  { cat: 'Zindelen §6', type: 'zd', q: 'Wat is het meewerkend voorwerp?', s: 'Heeft Aleph aan zijn broer een geheimpje verteld?', opts: ['Aleph', 'een geheimpje', 'aan zijn broer', 'verteld'], correct: 2, explain: 'Vraag: Aan wie heeft Aleph een geheimpje verteld? Antwoord: aan zijn broer = meewerkend voorwerp.' },
+  { cat: 'Zindelen §8', type: 'zd', q: 'Wat voor zinsdeel is "op de markt"?', s: 'Op de markt hebben we een stroopwafel gekocht.', opts: ['Onderwerp', 'Lijdend voorwerp', 'Bijwoordelijke bepaling', 'Bijvoeglijke bepaling'], correct: 2, explain: 'Op de markt geeft antwoord op de vraag "Waar?" en is daarmee een bijwoordelijke bepaling.' },
+  { cat: 'Zindelen §7', type: 'zd', q: 'Wat is de bijvoeglijke bepaling in de zin?', s: 'De stoere jongens in deze klas lopen in een oud trainingspak.', opts: ['de jongens', 'stoere → jongens', 'deze klas', 'lopen'], correct: 1, explain: 'Stoere geeft extra info over de kern "jongens": bijv.bep = stoere → jongens. Let op: "in deze klas" is ook bijv.bep bij jongens!' },
+  { cat: 'Zindelen §9', type: 'zd', q: 'Hoeveel persoonsvormen heeft een enkelvoudige zin?', s: '', opts: ['Nul', 'Één', 'Twee', 'Drie of meer'], correct: 1, explain: 'Een enkelvoudige zin heeft precies één persoonsvorm. Bij twee of meer persoonsvormen spreek je van een samengestelde zin.' },
+  { cat: 'Zindelen §9', type: 'zd', q: 'Wat is kenmerkend voor de persoonsvorm in een bijzin?', s: '', opts: ['Staat vooraan', 'Staat achteraan', 'Staat in het midden', 'Staat nooit in een bijzin'], correct: 1, explain: 'In een bijzin staat de persoonsvorm vaak achteraan. In een hoofdzin staat de pv als eerste of tweede zinsdeel.' },
+  { cat: 'Zindelen §11', type: 'zd', q: 'Welk zinsdeel vervult de bijzin in deze zin?', s: 'Mijn vriend Nick vertelde me dat hij gaat emigreren.', opts: ['Onderwerp', 'Lijdend voorwerp', 'Meew. voorwerp', 'Bijw. bepaling'], correct: 1, explain: 'De bijzin "dat hij gaat emigreren" is het antwoord op "Wat vertelde Nick?" → lijdend voorwerp = lv-zin.' },
+  { cat: 'Zindelen §13', type: 'zd', q: 'Welk woord begint een bijvoeglijke bijzin als het antecedent een de-woord is?', s: '', opts: ['dat', 'die', 'wat', 'wie'], correct: 1, explain: 'Met "die" verwijs je naar de-woorden. Met "dat" verwijs je naar het-woorden.' },
+  { cat: 'Woordsoorten §4', type: 'ws', q: 'Welk woord is een aanwijzend voornaamwoord?', s: 'Welke sport beoefen jij? Dat vind ik interessant.', opts: ['Welke', 'sport', 'Dat', 'jij'], correct: 2, explain: '"Dat" wijst terug naar de zin "Welke sport beoefen jij". Je kunt het vervangen door "dit". Dus: aanwijzend voornaamwoord.' },
+  { cat: 'Woordsoorten §4', type: 'ws', q: 'Welke woorden zijn vragende voornaamwoorden?', s: '', opts: ['deze, die, dat, dit', 'wie, wat, welke, wat voor', 'hij, zij, het, wij', 'mijn, jouw, uw, zijn'], correct: 1, explain: 'De vier vragende voornaamwoorden zijn: wie, wat, welk(e), wat voor (een).' },
+  { cat: 'Woordsoorten §5', type: 'ws', q: 'Wat is "hun" in de zin?', s: 'Sam en Felicia laten ze uit bij hun huis.', opts: ['Persoonlijk voornaamwoord', 'Bezittelijk voornaamwoord', 'Aanwijzend voornaamwoord', 'Betrekkelijk voornaamwoord'], correct: 1, explain: '"hun" geeft aan van wie het huis is. Het staat voor een zn. (huis). Dit is een bezittelijk voornaamwoord.' },
+  { cat: 'Woordsoorten §6', type: 'ws', q: 'Wat is "zijn" in de zin?', s: 'Sommige opgaven in de toets zijn moeilijk.', opts: ['Zelfstandig werkwoord', 'Koppelwerkwoord', 'Hulpwerkwoord', 'Voegwoord'], correct: 1, explain: '"zijn" koppelt de eigenschap "moeilijk" aan het onderwerp "opgaven". De zin heeft een naamwoordelijk gezegde, dus "zijn" is een koppelwerkwoord.' },
+  { cat: 'Woordsoorten §6', type: 'ws', q: 'Wat is "heeft" in de zin?', s: 'In het weekend heeft Daley op de Linge gevist.', opts: ['Zelfstandig werkwoord', 'Koppelwerkwoord', 'Hulpwerkwoord', 'Bijwoord'], correct: 2, explain: '"heeft" is de persoonsvorm die helpt bij de werkwoordsvorm "gevist". Er zijn twee werkwoorden → heeft = hulpwerkwoord.' },
+  { cat: 'Woordsoorten §8', type: 'ws', q: 'Welke soort telwoord is "eerste"?', s: 'In de eerste pauze at Yessin drie boterhammen.', opts: ['Bepaald hoofdtelwoord', 'Onbepaald hoofdtelwoord', 'Bepaald rangtelwoord', 'Onbepaald rangtelwoord'], correct: 2, explain: '"eerste" geeft een duidelijke plaats in een volgorde aan. Het is een bepaald rangtelwoord.' },
+  { cat: 'Woordsoorten §10', type: 'ws', q: 'Welk woord is een nevenschikkend voegwoord?', s: 'Een tompouce is lekker, maar dit gebakje is lastig te eten.', opts: ['maar', 'omdat', 'hoewel', 'doordat'], correct: 0, explain: '"maar" is een van de vijf nevenschikkende voegwoorden (dus, en, maar, of, want). Het verbindt twee hoofdzinnen.' },
+  { cat: 'Woordsoorten §12', type: 'ws', q: 'Wat is "kunnen" in de zin?', s: 'Katrien Duck zal niet kunnen optreden.', opts: ['Zelfstandig werkwoord', 'Koppelwerkwoord', 'Hulpwerkwoord', 'Bijwoord'], correct: 2, explain: 'Er zijn drie werkwoorden: zal, kunnen, optreden. Zal = hww (pv), kunnen = hww, optreden = zww.' },
+  { cat: 'Woordsoorten §14', type: 'ws', q: 'Welk betrekkelijk voornaamwoord gebruik je bij het-woorden?', s: '', opts: ['die', 'dat', 'wie', 'wat'], correct: 1, explain: 'Met "dat" verwijs je naar het-woorden. Met "die" naar de-woorden.' },
+  { cat: 'Woordsoorten §14', type: 'ws', q: 'Wat is "die" in de zin?', s: 'Met de jongen die daar op dat bankje zit, heeft mijn zus verkering gehad.', opts: ['Aanwijzend voornaamwoord', 'Vragend voornaamwoord', 'Betrekkelijk voornaamwoord', 'Persoonlijk voornaamwoord'], correct: 2, explain: '"die" wijst terug naar "de jongen" (antecedent) en begint een bijvoeglijke bijzin. Je kunt het NIET vervangen door "deze" → betrekkelijk voornaamwoord.' },
+];
+
+let quizQuestions = [...allQuestions];
+let qIdx = 0, qScore = 0, qAnswered = false;
+
+function filterQuiz(type, btn) {
+  document.querySelectorAll('.quiz-topic-select .topic-btn').forEach(b => {
+    b.className = 'topic-btn';
+  });
+  if (type === 'zd') { btn.className = 'topic-btn active-zd'; quizQuestions = allQuestions.filter(q => q.type === 'zd'); }
+  else if (type === 'ws') { btn.className = 'topic-btn active-ws'; quizQuestions = allQuestions.filter(q => q.type === 'ws'); }
+  else { btn.className = 'topic-btn active-zd'; quizQuestions = [...allQuestions]; }
+  restartQuiz();
+}
+
+function restartQuiz() {
+  qIdx = 0; qScore = 0; qAnswered = false;
+  document.getElementById('quiz-score').style.display = 'none';
+  document.getElementById('quiz-main').style.display = 'block';
+  document.getElementById('q-score-live').textContent = 'Score: 0';
+  renderQuestion();
+}
+
+function renderQuestion() {
+  if (qIdx >= quizQuestions.length) { showScore(); return; }
+  const q = quizQuestions[qIdx];
+  document.getElementById('q-label').textContent = `Vraag ${qIdx+1} van ${quizQuestions.length}`;
+  document.getElementById('q-progress').style.width = `${((qIdx+1)/quizQuestions.length)*100}%`;
+  document.getElementById('q-cat').textContent = q.cat;
+  document.getElementById('q-question').textContent = q.q;
+  if (q.s) { document.getElementById('q-sentence').style.display = 'block'; document.getElementById('q-sentence').textContent = q.s; }
+  else { document.getElementById('q-sentence').style.display = 'none'; }
+  const opts = document.getElementById('q-options');
+  opts.innerHTML = '';
+  q.opts.forEach((o, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = o;
+    btn.onclick = () => selectAnswer(i);
+    opts.appendChild(btn);
+  });
+  document.getElementById('q-feedback').className = 'quiz-feedback';
+  document.getElementById('q-feedback').textContent = '';
+  document.getElementById('q-next').style.display = 'none';
+  qAnswered = false;
+}
+
+function selectAnswer(i) {
+  if (qAnswered) return;
+  qAnswered = true;
+  const q = quizQuestions[qIdx];
+  const opts = document.querySelectorAll('.quiz-opt');
+  opts[q.correct].classList.add('correct');
+  const fb = document.getElementById('q-feedback');
+  if (i === q.correct) {
+    qScore++;
+    document.getElementById('q-score-live').textContent = `Score: ${qScore}`;
+    fb.className = 'quiz-feedback ok show';
+    fb.textContent = '✅ Goed! ' + q.explain;
+    opts[i].classList.add('correct');
+  } else {
+    opts[i].classList.add('wrong');
+    fb.className = 'quiz-feedback nope show';
+    fb.textContent = '❌ Helaas. ' + q.explain;
+  }
+  document.getElementById('q-next').style.display = 'inline-flex';
+}
+
+function nextQuestion() {
+  qIdx++;
+  if (qIdx >= quizQuestions.length) { showScore(); return; }
+  renderQuestion();
+}
+
+function showScore() {
+  document.getElementById('quiz-main').style.display = 'none';
+  const el = document.getElementById('quiz-score');
+  el.style.display = 'block';
+  const pct = Math.round((qScore / quizQuestions.length) * 100);
+  document.getElementById('score-num').textContent = `${qScore}/${quizQuestions.length}`;
+  const emojis = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '💪';
+  document.getElementById('score-emoji').textContent = emojis;
+  const msgs = pct >= 80 ? 'Uitstekend! Je beheerst de stof goed.' : pct >= 60 ? 'Goed bezig! Herhaal de moeilijke paragrafen nog eens.' : 'Oefen nog wat meer met de theorie en flitskaartjes.';
+  document.getElementById('score-msg').textContent = msgs;
+}
+
+// ===== ESCAPE ROOMS =====
+const rooms = {
+  zd: {
+    name: '🚂 De Treinzin Kamer',
+    intro: 'Je bent opgesloten in de treinzin kamer. Los de grammaticapuzzels op om de sleutels te vinden en te ontsnappen!',
+    puzzles: [
+      { title: 'PUZZEL 1 — De Sleutel van het Gezegde', story: 'Op de gesloten deur staat een zin gegraveerd. Je moet weten welk gezegde de zin heeft om het slot te openen.', q: 'Welk soort gezegde heeft deze zin?', s: 'Lyana is de hele dag bevriend met Kate gebleven.', opts: ['Werkwoordelijk gezegde', 'Naamwoordelijk gezegde'], correct: 1, fb: 'Correct! "is gebleven" bevat het koppelwerkwoord "blijven". Naamwoordelijk deel: [bevriend met Kate]. 🔑' },
+      { title: 'PUZZEL 2 — Het Meewerkend Voorwerp Mysterie', story: 'Op de safe staat een vraag. Je hebt het meewerkend voorwerp nodig als code.', q: 'Wat is het meewerkend voorwerp?', s: 'De leraar heeft de leerlingen een moeilijke opgave gegeven.', opts: ['de leraar', 'een moeilijke opgave', 'de leerlingen', 'gegeven'], correct: 2, fb: 'Juist! Aan wie heeft de leraar een opgave gegeven? → aan de leerlingen = mv. 🔑' },
+      { title: 'PUZZEL 3 — De Bijwoordelijke Bepaling Brug', story: 'Om de brug over te steken moet je de bijwoordelijke bepaling identificeren.', q: 'Welk zinsdeel is "gisteren"?', s: 'Gisteren heeft het hard geregend in Amsterdam.', opts: ['Onderwerp', 'Lijdend voorwerp', 'Bijwoordelijke bepaling', 'Bijvoeglijke bepaling'], correct: 2, fb: 'Top! "Gisteren" geeft aan wanneer het regende → bijwoordelijke bepaling (Wanneer?). 🔑' },
+      { title: 'PUZZEL 4 — De Bijvoeglijke Bepaling Kluis', story: 'De kluis gaat open als je de bijvoeglijke bepaling herkent.', q: 'Wat is de bijvoeglijke bepaling bij "boek"?', s: 'Ik las een dik, oud boek over de middeleeuwen.', opts: ['ik', 'een', 'dik en oud → boek', 'over de middeleeuwen → boek'], correct: 2, fb: 'Bravo! "dik" en "oud" geven extra info over "boek". Lidwoord "een" telt niet mee. 🔑' },
+      { title: 'PUZZEL 5 — De Samengestelde Zin Exitdeur', story: 'De laatste deur heeft drie sloten. Je hebt alle kennis nodig!', q: 'Hoeveel bijzinnen heeft de volgende zin?', s: 'Lavezzi zet de verwarming lager, want zij heeft het warm, doordat ze een wollen trui draagt.', opts: ['Nul', 'Één', 'Twee', 'Drie'], correct: 1, fb: 'Correct! Er is één bijzin: "doordat ze een wollen trui draagt". "want" verbindt twee hoofdzinnen. 🎉 ONTSNAPT!' },
+    ]
+  },
+  ws: {
+    name: '🔤 Het Woordenschat Gewelf',
+    intro: 'Je bent gevangen in het woordenschat gewelf vol vergrendelde kluizen. Herken de woordsoorten en open alle kluizen!',
+    puzzles: [
+      { title: 'KLUIS 1 — De Voornaamwoord Vergrendeling', story: 'Op de eerste kluis staat een zin. Herken het juiste voornaamwoord.', q: 'Welk soort voornaamwoord is "dat" in de zin?', s: 'Mijn broer draait keiharde muziek. Ik vind dat erg storend.', opts: ['Betrekkelijk voornaamwoord', 'Aanwijzend voornaamwoord', 'Vragend voornaamwoord', 'Persoonlijk voornaamwoord'], correct: 1, fb: '"dat" wijst terug naar de hele vorige zin. Je kunt het vervangen door "dit" → aanwijzend voornaamwoord! 🔑' },
+      { title: 'KLUIS 2 — De Werkwoord Waakzaamheid', story: 'De combinatiekluis vraagt om de juiste werkwoordsoort.', q: 'Wat is "wordt" in deze zin?', s: 'Olivia wordt boos om de situatie.', opts: ['Zelfstandig werkwoord', 'Koppelwerkwoord', 'Hulpwerkwoord', 'Bijwoord'], correct: 1, fb: '"wordt" koppelt de eigenschap "boos" aan Olivia. Dit is een koppelwerkwoord in een naamwoordelijk gezegde. 🔑' },
+      { title: 'KLUIS 3 — De Telwoord Toegangscode', story: 'De toegangscode bestaat uit de juiste naam van het vetgedrukte telwoord.', q: 'Wat voor telwoord is "sommige"?', s: 'Sommige leerlingen hadden het antwoord al gevonden.', opts: ['Bepaald hoofdtelwoord', 'Onbepaald hoofdtelwoord', 'Bepaald rangtelwoord', 'Onbepaald rangtelwoord'], correct: 1, fb: '"sommige" geeft een onduidelijk aantal aan → onbepaald hoofdtelwoord! 🔑' },
+      { title: 'KLUIS 4 — De Voegwoord Veiligheidscheck', story: 'Alleen met het juiste voegwoord open je de beveiligde deur.', q: 'Wat voor voegwoord is "omdat"?', s: 'Ze bleef thuis omdat ze ziek was.', opts: ['Nevenschikkend voegwoord', 'Onderschikkend voegwoord', 'Betrekkelijk voornaamwoord', 'Bijwoord'], correct: 1, fb: '"omdat" verbindt een bijzin met de hoofdzin → onderschikkend voegwoord! 🔑' },
+      { title: 'KLUIS 5 — De Betrekkelijke Bevrijding', story: 'De laatste kluis. Kies het juiste betrekkelijk voornaamwoord en ontsnap!', q: 'Welk betrekkelijk voornaamwoord hoort hier?', s: 'Dit is de vrouw ... ik het boek heb geleend.', opts: ['die', 'dat', 'wat', 'wie'], correct: 0, fb: '"vrouw" is een de-woord → betrekkelijk voornaamwoord = "die". 🎉 ONTSNAPT!' },
+    ]
+  },
+  mixed: {
+    name: '⚡ De Eindbaas Kamer',
+    intro: 'De ultieme grammaticatest! Alles wat je hebt geleerd komt samen. Weet jij te ontsnappen?',
+    puzzles: [
+      { title: 'UITDAGING 1', story: '', q: 'Wat is het naamwoordelijk deel in de zin?', s: 'Ruud is vroeger een geweldige voetballer geweest.', opts: ['Ruud', 'vroeger', 'een geweldige voetballer', 'geweest'], correct: 2, fb: 'ng = is [een geweldige voetballer] geweest. 🔑' },
+      { title: 'UITDAGING 2', story: '', q: 'Wat is "is" in de zin?', s: 'De zon schijnt, maar de grond is nog nat.', opts: ['Koppelwerkwoord', 'Hulpwerkwoord', 'Zelfstandig werkwoord', 'Voegwoord'], correct: 0, fb: '"is" koppelt "nat" aan "de grond" → koppelwerkwoord in ng. 🔑' },
+      { title: 'UITDAGING 3', story: '', q: 'Welk zinsdeel is de bijzin?', s: 'Finn verwijt zijn zus dat ze nooit naar hem luistert.', opts: ['Onderwerp', 'Lijdend voorwerp', 'Meewerkend voorwerp', 'Bijw. bepaling'], correct: 1, fb: 'Wat verwijt Finn zijn zus? → dat ze nooit luistert = lv-zin. 🔑' },
+      { title: 'UITDAGING 4', story: '', q: 'Wat voor voornaamwoord is "wie" in de zin?', s: 'Dat meisje op wie jij verliefd bent, woont bij mij in de straat.', opts: ['Vragend voornaamwoord', 'Aanwijzend voornaamwoord', 'Betrekkelijk voornaamwoord', 'Persoonlijk voornaamwoord'], correct: 2, fb: '"wie" wijst terug naar "dat meisje" en begint een bijvoeglijke bijzin → betrekkelijk voornaamwoord. 🔑' },
+      { title: 'UITDAGING 5', story: '', q: 'Wat is "zal" in de volgende zin?', s: 'Ze zal morgen niet kunnen komen.', opts: ['Zelfstandig werkwoord', 'Koppelwerkwoord', 'Hulpwerkwoord', 'Bijwoord'], correct: 2, fb: 'Drie werkwoorden: zal (pv=hww), kunnen (hww), komen (zww). 🔑' },
+      { title: 'FINALE UITDAGING', story: 'De allerlaatste poort! Combineer al je kennis.', q: 'Welk zinsdeel is "van dit groepje"?', s: 'Wie van dit groepje wordt het aanspreekpunt?', opts: ['Bijvoeglijke bepaling bij Wie', 'Bijwoordelijke bepaling', 'Meewerkend voorwerp', 'Onderwerp'], correct: 0, fb: '"van dit groepje" geeft extra info over de kern "Wie" → bijv.bep = van dit groepje → Wie. 🎉 ONTSNAPT!' },
+    ]
+  }
+};
+
+let currentRoom = null, currentPuzzle = 0, puzzleAnswered = false;
+
+function startRoom(type) {
+  currentRoom = rooms[type];
+  currentPuzzle = 0;
+  puzzleAnswered = false;
+  document.getElementById('escape-lobby').style.display = 'none';
+  document.getElementById('escape-game').classList.add('active');
+  document.getElementById('escape-complete').classList.remove('show');
+  document.getElementById('room-name-label').textContent = currentRoom.name;
+  renderPuzzle();
+}
+
+function renderPuzzle() {
+  const p = currentRoom.puzzles[currentPuzzle];
+  const total = currentRoom.puzzles.length;
+  document.getElementById('puzzle-counter').textContent = `Puzzel ${currentPuzzle+1}/${total}`;
+  
+  // Keys
+  const keys = document.getElementById('escape-keys');
+  keys.innerHTML = '';
+  for (let i = 0; i < total; i++) {
+    const k = document.createElement('span');
+    k.className = 'key-icon ' + (i < currentPuzzle ? 'earned' : 'locked');
+    k.textContent = i < currentPuzzle ? '🗝️' : '🔒';
+    keys.appendChild(k);
+  }
+
+  document.getElementById('puzzle-title').textContent = p.title;
+  document.getElementById('puzzle-story').textContent = p.story;
+  document.getElementById('puzzle-q').textContent = p.q;
+  if (p.s) { document.getElementById('puzzle-sent').style.display = 'block'; document.getElementById('puzzle-sent').textContent = p.s; }
+  else { document.getElementById('puzzle-sent').style.display = 'none'; }
+  
+  const opts = document.getElementById('puzzle-opts');
+  opts.innerHTML = '';
+  p.opts.forEach((o, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'puzzle-opt';
+    btn.textContent = o;
+    btn.onclick = () => selectPuzzleAnswer(i);
+    opts.appendChild(btn);
+  });
+  document.getElementById('puzzle-fb').className = 'puzzle-feedback';
+  document.getElementById('puzzle-fb').textContent = '';
+  document.getElementById('puzzle-next-btn').style.display = 'none';
+  puzzleAnswered = false;
+}
+
+function selectPuzzleAnswer(i) {
+  if (puzzleAnswered) return;
+  puzzleAnswered = true;
+  const p = currentRoom.puzzles[currentPuzzle];
+  const opts = document.querySelectorAll('.puzzle-opt');
+  opts[p.correct].classList.add('correct');
+  const fb = document.getElementById('puzzle-fb');
+  if (i === p.correct) {
+    fb.className = 'puzzle-feedback ok show';
+    fb.textContent = p.fb;
+    opts[i].classList.add('correct');
+  } else {
+    opts[i].classList.add('wrong');
+    fb.className = 'puzzle-feedback nope show';
+    fb.textContent = '❌ Helaas. Probeer eens opnieuw! ' + p.fb;
+  }
+  document.getElementById('puzzle-next-btn').style.display = 'inline-flex';
+}
+
+function nextPuzzle() {
+  currentPuzzle++;
+  if (currentPuzzle >= currentRoom.puzzles.length) {
+    // Update keys
+    const keys = document.getElementById('escape-keys');
+    keys.innerHTML = '';
+    for (let i = 0; i < currentRoom.puzzles.length; i++) {
+      const k = document.createElement('span');
+      k.className = 'key-icon earned';
+      k.textContent = '🗝️';
+      keys.appendChild(k);
+    }
+    document.getElementById('escape-puzzle-box').style.display = 'none';
+    const complete = document.getElementById('escape-complete');
+    complete.classList.add('show');
+    document.getElementById('escape-complete-msg').textContent = `Je hebt alle ${currentRoom.puzzles.length} puzzels van "${currentRoom.name}" opgelost! Je bent ontsnapt!`;
+    return;
+  }
+  renderPuzzle();
+}
+
+function exitRoom() {
+  document.getElementById('escape-lobby').style.display = 'block';
+  document.getElementById('escape-game').classList.remove('active');
+  document.getElementById('escape-puzzle-box').style.display = 'block';
+  document.getElementById('escape-complete').classList.remove('show');
+  currentRoom = null;
+}
+
+// ===== FLASHCARDS =====
+const flashcards = [
+  { cat: 'Zindelen', term: 'Naamwoordelijk gezegde (ng)', def: 'Zegt wat iemand of iets ís, wordt of blijft. Bestaat uit een koppelwerkwoord (ww.deel) en een naamwoordelijk deel (zn. of bn.).', ex: 'Alinde is opnieuw keepster. → ng = is [keepster]', type: 'zd' },
+  { cat: 'Zindelen', term: 'Werkwoordelijk gezegde (wg)', def: 'Zegt wat iemand of iets doet of overkomt. Bevat een zelfstandig werkwoord.', ex: 'Said spaart voor de iPhone. → wg = spaart', type: 'zd' },
+  { cat: 'Zindelen', term: 'Koppelwerkwoorden', def: 'Zijn, worden, blijven, blijken, lijken en schijnen. Koppelen een eigenschap aan het onderwerp.', ex: 'Olivia wordt boos. — Ze lijkt blij.', type: 'zd' },
+  { cat: 'Zindelen', term: 'Meewerkend voorwerp (mv)', def: 'Geeft aan voor wie iets bestemd is. Staat bij werkwoorden als geven, vertellen, beloven. Begin/voeg "aan" toe als test.', ex: 'Heeft Aleph aan zijn broer een geheimpje verteld?', type: 'zd' },
+  { cat: 'Zindelen', term: 'Bijwoordelijke bepaling (bwb)', def: 'Geeft antwoord op: Waar? Wanneer? Hoe? Waarom? Waarvandaan? Waarheen? Ook: niet, misschien, natuurlijk.', ex: 'Op de markt (waar?) — gisteren (wanneer?)', type: 'zd' },
+  { cat: 'Zindelen', term: 'Bijvoeglijke bepaling (bijv.bep)', def: 'Geeft extra info over de kern (zn. of vnw.) binnen een zinsdeel. Lidwoorden en telwoorden tellen niet mee!', ex: 'De stoere jongens → bijv.bep = stoere → jongens', type: 'zd' },
+  { cat: 'Zindelen', term: 'Enkelvoudige zin', def: 'Een zin met precies één persoonsvorm.', ex: 'Lavezzi zet de verwarming lager. (1 pv)', type: 'zd' },
+  { cat: 'Zindelen', term: 'Samengestelde zin', def: 'Een zin met meer dan één persoonsvorm. Bestaat uit hoofdzinnen en/of bijzinnen.', ex: 'Ze spaart, want ze wil een iPhone kopen.', type: 'zd' },
+  { cat: 'Zindelen', term: 'Bijvoeglijke bijzin (bijv.bijzin)', def: 'Bijvoeglijke bepaling die een pv bevat. Begint vaak met die/dat, staat achter de kern, is een zinsdeelstuk.', ex: 'Het standbeeld dat van brons is gemaakt... → bijv.bijzin = dat van brons is gemaakt → standbeeld', type: 'zd' },
+  { cat: 'Zindelen', term: 'Onderwerpszin (ow-zin)', def: 'Een bijzin die het onderwerp van de hoofdzin vormt.', ex: '(Wie zich snel opgeeft), is zeker van een plaats.', type: 'zd' },
+  { cat: 'Woordsoorten', term: 'Aanwijzend voornaamwoord (aanw.vnw)', def: 'Wijst een mens, dier of ding aan. Test: kan je vervangen door dit/deze?', ex: 'deze, die, dat, dit, zulke, zo\'n, hetzelfde', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Vragend voornaamwoord (vr.vnw)', def: 'Staat aan begin van vraag of vraagzin. Er zijn er precies vier.', ex: 'wie, wat, welk(e), wat voor (een)', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Persoonlijk voornaamwoord (pers.vnw)', def: 'Verwijst naar een persoon, dier of ding.', ex: 'ik, jij/je, hij, zij/ze, wij/we, jullie, het', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Bezittelijk voornaamwoord (bez.vnw)', def: 'Geeft aan van wie iets is. Staat altijd vóór een zelfstandig naamwoord.', ex: 'mijn, jouw, zijn, haar, ons/onze, jullie, hun', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Zelfstandig werkwoord (zww)', def: 'Zegt wat iemand doet of overkomt. Staat in werkwoordelijk gezegde. Heeft een duidelijke betekenis.', ex: 'vissen, wandelen, krijgen, schrikken', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Koppelwerkwoord (kww)', def: 'Koppelt eigenschap aan onderwerp in naamwoordelijk gezegde.', ex: 'zijn, worden, blijven, blijken, lijken, schijnen', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Hulpwerkwoord (hww)', def: 'Helpt het gezegde maken. Staat als persoonsvorm bij meer dan één werkwoord.', ex: 'hebben, zijn, zullen, kunnen, mogen, moeten, willen', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Telwoord', def: 'Geeft hoeveelheid of volgorde aan. Vier soorten: bep./onbep. hoofd- en rangtelwoord.', ex: 'drie (bep.hoofd), sommige (onbep.hoofd), eerste (bep.rang), laatste (onbep.rang)', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Nevenschikkend voegwoord (ns.vgw)', def: 'Verbindt twee gelijkwaardige zinsdelen of hoofdzinnen. Slechts 5!', ex: 'dus, en, maar, of, want', type: 'ws' },
+  { cat: 'Woordsoorten', term: 'Betrekkelijk voornaamwoord (betr.vnw)', def: 'Begint een bijvoeglijke bijzin en wijst terug naar een antecedent (kern). Test: kun je die/dat NIET vervangen door deze/dit?', ex: 'die (de-woorden), dat (het-woorden), wie (personen + vz.), wat (alles, niets, iets...)', type: 'ws' },
+];
+
+let flashSet = [...flashcards];
+let flashIdx = 0;
+
+function filterFlash(type, btn) {
+  document.querySelectorAll('.flash-controls .topic-btn').forEach(b => b.className = 'topic-btn');
+  if (type === 'zd') { btn.className = 'topic-btn active-zd'; flashSet = flashcards.filter(f => f.type === 'zd'); }
+  else if (type === 'ws') { btn.className = 'topic-btn active-ws'; flashSet = flashcards.filter(f => f.type === 'ws'); }
+  else { btn.className = 'topic-btn active-zd'; flashSet = [...flashcards]; }
+  flashIdx = 0;
+  renderFlash();
+}
+
+function shuffleFlash() {
+  for (let i = flashSet.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [flashSet[i], flashSet[j]] = [flashSet[j], flashSet[i]];
+  }
+  flashIdx = 0;
+  renderFlash();
+}
+
+function renderFlash() {
+  const f = flashSet[flashIdx];
+  document.getElementById('fc-cat').textContent = f.cat;
+  document.getElementById('fc-term').textContent = f.term;
+  document.getElementById('fc-def').textContent = f.def;
+  document.getElementById('fc-ex').textContent = f.ex;
+  document.getElementById('flash-counter').textContent = `${flashIdx+1} / ${flashSet.length}`;
+  document.getElementById('flashcard').classList.remove('flipped');
+}
+
+function flipCard() {
+  document.getElementById('flashcard').classList.toggle('flipped');
+}
+
+function nextCard() {
+  flashIdx = (flashIdx + 1) % flashSet.length;
+  renderFlash();
+}
+
+function prevCard() {
+  flashIdx = (flashIdx - 1 + flashSet.length) % flashSet.length;
+  renderFlash();
+}
+
+// Init
+renderQuestion();
+renderFlash();
+document.getElementById('puzzle-next-btn').style.display = 'none';
+</script>
+</body>
+</html>
