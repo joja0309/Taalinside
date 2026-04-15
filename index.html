@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taal Inside – Nederlands Onderbouw</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Bangers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-top">
+    <div class="off-icon sz-header off-logo-header" title="Taal Inside"></div>
+    <div>
+      <div class="logo-text">TAAL <span>INSIDE</span> <div class="logo-badge">★ NL ★</div></div>
+      <div class="tagline">Nederlands voor onderbouw mavo · havo · vwo</div>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#" class="active" onclick="toonSectie('home',this);return false;"><span class="nav-home-icon">🏠</span> Home</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('lezen',this);return false;"><span class="skill-icon sz-nav nav-logo-lezen"></span> Leesvaardigheid</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('schrijven',this);return false;"><span class="skill-icon sz-nav nav-logo-schrijven"></span> Schrijfvaardigheid</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('spreken',this);return false;"><span class="skill-icon sz-nav nav-logo-spreken"></span> Spreekvaardigheid</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('luisteren',this);return false;"><span class="skill-icon sz-nav nav-logo-luisteren"></span> Luistervaardigheid</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('gesprekken',this);return false;"><span class="skill-icon sz-nav nav-logo-gesprekken"></span> Gespreksvaardigheid</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('taalbasis',this);return false;"><span class="nav-home-icon">🔤</span> Taalbasis</a></li>
+      <li class="nav-item"><a href="#" onclick="toonSectie('literatuur',this);return false;"><span class="nav-home-icon">📚</span> Tekst & Literatuur</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-logo-wrap">
+    <div class="hero-main-logo" title="Taal Inside"></div>
+  </div>
+  <p>Alles wat je nodig hebt voor Nederlands – uitleg, voorbeelden, oefeningen én quizzen!</p>
+  <div class="hero-cards">
+    <div class="hero-card" onclick="toonSectie('lezen',null)">
+      <span class="skill-icon sz-nav nav-logo-lezen"></span> Leesvaardigheid
+    </div>
+    <div class="hero-card" onclick="toonSectie('schrijven',null)">
+      <span class="skill-icon sz-nav nav-logo-schrijven"></span> Schrijfvaardigheid
+    </div>
+    <div class="hero-card" onclick="toonSectie('spreken',null)">
+      <span class="skill-icon sz-nav nav-logo-spreken"></span> Spreken
+    </div>
+    <div class="hero-card" onclick="toonSectie('luisteren',null)">
+      <span class="skill-icon sz-nav nav-logo-luisteren"></span> Luisteren
+    </div>
+    <div class="hero-card" onclick="toonSectie('gesprekken',null)">
+      <span class="skill-icon sz-nav nav-logo-gesprekken"></span> Gesprekken
+    </div>
+    <div class="hero-card" onclick="toonSectie('taalbasis',null)">🔤 Taalbasis</div>
+  </div>
+</div>
+
+<div class="main-container">
+
+<!-- HOME -->
+<div class="section active" id="section-home">
+  <div class="home-grid">
+    <div class="home-card" onclick="toonSectie('lezen',null)">
+      <div class="home-card-icon-wrap">
+        <span class="skill-icon sz-card logo-lezen"></span>
+      </div>
+      <h3>Leesvaardigheid</h3>
+      <p>Leer teksten begrijpen, analyseren en beoordelen.</p>
+      <div class="topics">
+        <span class="topic-tag">Leesstrategieën</span>
+        <span class="topic-tag">Tekstsoorten</span>
+        <span class="topic-tag">Argumentatie</span>
+        <span class="topic-tag">Signaalwoorden</span>
+      </div>
+    </div>
+    <div class="home-card" onclick="toonSectie('schrijven',null)">
+      <div class="home-card-icon-wrap">
+        <span class="skill-icon sz-card logo-schrijven"></span>
+      </div>
+      <h3>Schrijfvaardigheid</h3>
+      <p>Schrijf heldere teksten met de juiste opbouw en stijl.</p>
+      <div class="topics">
+        <span class="topic-tag">Tekstopbouw</span>
+        <span class="topic-tag">Argumenteren</span>
+        <span class="topic-tag">Formuleren</span>
+        <span class="topic-tag">Reviseren</span>
+      </div>
+    </div>
+    <div class="home-card" onclick="toonSectie('spreken',null)">
+      <div class="home-card-icon-wrap">
+        <span class="skill-icon sz-card logo-spreken"></span>
+      </div>
+      <h3>Spreekvaardigheid</h3>
+      <p>Houd overtuigende presentaties en spreek met zelfvertrouwen.</p>
+      <div class="topics">
+        <span class="topic-tag">Presentatie</span>
+        <span class="topic-tag">Lichaamstaal</span>
+        <span class="topic-tag">Stemgebruik</span>
+      </div>
+    </div>
+    <div class="home-card" onclick="toonSectie('luisteren',null)">
+      <div class="home-card-icon-wrap">
+        <span class="skill-icon sz-card logo-luisteren"></span>
+      </div>
+      <h3>Luistervaardigheid</h3>
+      <p>Luister gericht en haal de belangrijkste informatie eruit.</p>
+      <div class="topics">
+        <span class="topic-tag">Hoofdgedachte</span>
+        <span class="topic-tag">Aantekeningen</span>
+        <span class="topic-tag">Sprekersdoel</span>
+      </div>
+    </div>
+    <div class="home-card" onclick="toonSectie('gesprekken',null)">
+      <div class="home-card-icon-wrap">
+        <span class="skill-icon sz-card logo-gesprekken"></span>
+      </div>
+      <h3>Gespreksvaardigheid</h3>
+      <p>Voer goede gesprekken: luister, reageer en argumenteer.</p>
+      <div class="topics">
+        <span class="topic-tag">Debat</span>
+        <span class="topic-tag">Discussie</span>
+        <span class="topic-tag">Overleg</span>
+      </div>
+    </div>
+    <div class="home-card" onclick="toonSectie('taalbasis',null)">
+      <div class="home-card-icon-wrap" style="font-size:3rem;">🔤</div>
+      <h3>Taalbasis</h3>
+      <p>Grammatica, woordsoorten, zinsdelen en formuleren.</p>
+      <div class="topics">
+        <span class="topic-tag">Grammatica</span>
+        <span class="topic-tag">Woordsoorten</span>
+        <span class="topic-tag">Zinsbouw</span>
+      </div>
+    </div>
+    <div class="home-card" onclick="toonSectie('literatuur',null)">
+      <div class="home-card-icon-wrap" style="font-size:3rem;">📚</div>
+      <h3>Tekst & Literatuur</h3>
+      <p>Fictie, non-fictie, poëzie en literaire begrippen.</p>
+      <div class="topics">
+        <span class="topic-tag">Poëzie</span>
+        <span class="topic-tag">Non-fictie</span>
+        <span class="topic-tag">Beeldspraak</span>
+      </div>
+    </div>
+  </div>
+  <div class="tip-blok">
+    <div class="tip-icon">💡</div>
+    <div>
+      <strong>Hoe gebruik je Taal Inside?</strong>
+      <ul class="checklist" style="margin-top:8px;">
+        <li>Klik op een vaardigheid in het menu bovenaan of op een kaart hierboven</li>
+        <li>Gebruik de tabbladen binnen elk onderdeel om specifieke onderwerpen te bekijken</li>
+        <li>Doe de quizzen om te oefenen en je kennis te testen</li>
+        <li>Lees de tips en voorbeelden goed door – ze helpen je echt!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- LEESVAARDIGHEID -->
+<div class="section" id="section-lezen">
+  <div class="section-header">
+    <div class="section-icon-wrap">
+      <span class="skill-icon sz-sec sec-logo-lezen"></span>
+    </div>
+    <div>
+      <h2><span>Lees</span>vaardigheid</h2>
+      <p>Leer teksten begrijpen, analyseren en kritisch beoordelen – van globaal lezen tot argumentatie.</p>
+    </div>
+  </div>
+  <div class="section-body">
+
+    <!-- CATEGORIE NAVIGATOR -->
+    <div class="tab-groep-nav">
+      <button class="tab-groep-btn active" onclick="toonTabGroep('lezen','sg',this)">Strategieën &amp; Basis</button>
+      <button class="tab-groep-btn" onclick="toonTabGroep('lezen','tb',this)">Tekstbouw</button>
+      <button class="tab-groep-btn" onclick="toonTabGroep('lezen','vd',this)">Argumentatie</button>
+    </div>
+
+    <!-- ===== GROEP 1: STRATEGIEËN & BASIS ===== -->
+    <div class="tab-groep-panel active" id="lezen-groep-sg">
+      <div class="sub-tabs">
+        <button class="sub-tab active" onclick="toonTabInGroep('lezen','sg','woordraad',this)">Woordraadstrategieën</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','sg','strategieen',this)">Leesstrategieën</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','sg','onderwerp',this)">Onderwerp &amp; Hoofdgedachte</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','sg','hoofdzaak',this)">Hoofdzaak &amp; Bijzaak</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','sg','actieflezen',this)">Actief lezen</button>
+      </div>
+
+      <!-- TAB 1: WOORDRAADSTRATEGIEËN -->
+      <div class="content-panel active" id="lezen-sg-woordraad">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Woordraadstrategieën</h3>
+        <p class="intro-tekst">Een onbekend woord? Geen paniek. Met de juiste strategie kun je de betekenis raden – zelfs zonder woordenboek.</p>
+        <div class="uitleg-blok">
+          <h4>Wat zijn woordraadstrategieën?</h4>
+          <p>Als je een woord niet kent, gebruik je de <strong>context</strong> (de woorden eromheen) en je <strong>taalkennis</strong> (voorvoegsels, achtervoegsels, samenstelling) om de betekenis te achterhalen.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><h4>Contextclues</h4><p>Gebruik de zin en alinea eromheen. Wat past logisch? Zinnen vóór en ná het woord geven vaak aanwijzingen.</p></div>
+          <div class="card"><h4>Woordopbouw</h4><p>Splits het woord in delen: <strong>voor­voegsel + stam + achtervoegsel</strong>. Elk deel draagt betekenis.</p></div>
+          <div class="card"><h4>Signaalwoorden</h4><p>Woorden als <em>dat wil zeggen</em>, <em>met andere woorden</em> en <em>oftewel</em> geven direct een uitleg van het onbekende woord.</p></div>
+          <div class="card"><h4>Bekende woordfamilie</h4><p>Ken je een verwant woord? <em>Verlichten</em> lijkt op <em>licht</em>. Gebruik die kennis als springplank.</p></div>
+        </div>
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Woordopbouw ontleden</div>
+          <p><strong>Woord:</strong> <em>onvermijdelijk</em></p>
+          <div class="tekst"><strong>on-</strong> = niet &nbsp;|&nbsp; <strong>vermijden</strong> = ontwijken &nbsp;|&nbsp; <strong>-lijk</strong> = bijvoeglijk naamwoord<br><span style="color:var(--blauw-mid)">Betekenis: wat je niet kunt ontwijken / wat zeker zal gebeuren</span></div>
+        </div>
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Contextclue gebruiken</div>
+          <div class="tekst">"De atleet was <em>uitgeput</em> na de marathon. Zijn benen waren zwaar en hij kon nauwelijks meer lopen."<br><br><span style="color:var(--blauw-mid)">De zin erna beschrijft extreme vermoeidheid → <em>uitgeput</em> = doodmoe.</span></div>
+        </div>
+        <div class="uitleg-blok">
+          <h4>Handige voorvoegsels &amp; achtervoegsels</h4>
+          <ul>
+            <li><strong>on-</strong> = niet (onzeker, oneerlijk)</li>
+            <li><strong>be-</strong> = versterkt of werkwoord maken (bespreken, benadrukken)</li>
+            <li><strong>-heid</strong> = eigenschap (vrijheid, eerlijkheid)</li>
+            <li><strong>-loos</strong> = zonder (werkeloos, roekeloos)</li>
+            <li><strong>-achtig</strong> = lijkt op (kindachtig, groenachtig)</li>
+            <li><strong>her-</strong> = opnieuw (herschrijven, herbouwen)</li>
+          </ul>
+        </div>
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Het eerste woord dat je kent als betekenis overnemen zonder de context te checken</li>
+            <li>Woorddelen verkeerd splitsen: <em>be-lang-rijk</em>, niet <em>bel-ang-rijk</em></li>
+            <li>Te snel opgeven – gebruik altijd minimaal twee strategieën</li>
+          </ul>
+        </div>
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip voor havo/vwo:</strong> Bij moeilijke teksten helpt het om het onbekende woord te vervangen door een zelfverzonnen synoniem en te kijken of de zin nog klopt.</div></div>
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-woordraad">
+            <div class="quiz-teller" id="mq-woordraad-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-woordraad-vraag"></div>
+            <div class="antwoord-opties" id="mq-woordraad-opties"></div>
+            <div class="quiz-feedback" id="mq-woordraad-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-woordraad-volgende" onclick="mqVolgende('woordraad')" disabled>Volgende</button><span class="quiz-score" id="mq-woordraad-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: LEESSTRATEGIEËN -->
+      <div class="content-panel" id="lezen-sg-strategieen">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Leesstrategieën</h3>
+        <p class="intro-tekst">Je leest niet altijd op dezelfde manier. Welke strategie je kiest, hangt af van je doel: wat wil je te weten komen?</p>
+        <div class="cards-grid">
+          <div class="card"><h4>Oriënterend lezen</h4><p>Je scant de tekst snel voor een eerste indruk. Je bekijkt titel, tussenkopjes, afbeeldingen en eerste zinnen.</p><p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)"><strong>Wanneer?</strong> Om te beslissen óf je iets gaat lezen.</p></div>
+          <div class="card"><h4>Globaal lezen</h4><p>Je leest snel door voor de hoofdgedachte en opbouw. Details sla je over.</p><p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)"><strong>Wanneer?</strong> Als je snel de kern wilt kennen.</p></div>
+          <div class="card"><h4>Intensief lezen</h4><p>Je leest heel nauwkeurig, woord voor woord. Alle details tellen mee.</p><p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)"><strong>Wanneer?</strong> Bij moeilijke of belangrijke teksten.</p></div>
+          <div class="card"><h4>Zoekend lezen</h4><p>Je zoekt gericht naar een woord, getal of antwoord. De rest lees je niet.</p><p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)"><strong>Wanneer?</strong> Bij examenopgaven of lijsten.</p></div>
+        </div>
+        <div class="uitleg-blok">
+          <h4>De OGIO-methode</h4>
+          <ul>
+            <li><strong>O</strong>riënterend – verken de tekst</li>
+            <li><strong>G</strong>lobaal – lees voor de rode draad</li>
+            <li><strong>I</strong>ntensief – lees volledig en grondig</li>
+            <li><strong>O</strong>verdenken – verwerk wat je gelezen hebt</li>
+          </ul>
+        </div>
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Strategie kiezen: schoolexamen</div>
+          <div class="tekst"><strong>Stap 1 – Oriënterend:</strong> bekijk titel, kopjes, eerste en laatste alinea.<br><strong>Stap 2 – Globaal:</strong> lees snel om de lijn van het betoog te begrijpen.<br><strong>Stap 3 – Zoekend:</strong> zoek de zinnen met mening-signaalwoorden.<br><span style="color:var(--blauw-mid)">Resultaat: efficiënt én volledig beantwoord.</span></div>
+        </div>
+        <div class="stappenplan">
+          <div class="stap"><div class="stap-nr">1</div><div class="stap-inhoud"><h5>Bepaal je leesdoel</h5><p>Waarom lees je de tekst? Wat wil je weten?</p></div></div>
+          <div class="stap"><div class="stap-nr">2</div><div class="stap-inhoud"><h5>Verken de tekst</h5><p>Bekijk titel, kopjes, afbeeldingen en de inleidende alinea.</p></div></div>
+          <div class="stap"><div class="stap-nr">3</div><div class="stap-inhoud"><h5>Kies je strategie</h5><p>Oriënterend / globaal / intensief / zoekend – afhankelijk van je doel.</p></div></div>
+          <div class="stap"><div class="stap-nr">4</div><div class="stap-inhoud"><h5>Controleer je begrip</h5><p>Kun je de hoofdgedachte in eigen woorden uitleggen?</p></div></div>
+        </div>
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Bij het examen gebruik je bijna altijd een combinatie van strategieën – begin altijd oriënterend.</div></div>
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-strategieen">
+            <div class="quiz-teller" id="mq-strategieen-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-strategieen-vraag"></div>
+            <div class="antwoord-opties" id="mq-strategieen-opties"></div>
+            <div class="quiz-feedback" id="mq-strategieen-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-strategieen-volgende" onclick="mqVolgende('strategieen')" disabled>Volgende</button><span class="quiz-score" id="mq-strategieen-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: ONDERWERP & HOOFDGEDACHTE -->
+      <div class="content-panel" id="lezen-sg-onderwerp">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Onderwerp &amp; Hoofdgedachte</h3>
+        <p class="intro-tekst">Het onderwerp zegt <em>waarover</em> de tekst gaat. De hoofdgedachte zegt <em>wat</em> de schrijver over dat onderwerp wil zeggen.</p>
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)"><h4>Onderwerp</h4><p>Is <strong>kort</strong>: één woord of een korte woordgroep.<br><em>Vraag: Waarover gaat de tekst?</em></p></div>
+          <div class="card" style="border-left-color:var(--groen)"><h4>Hoofdgedachte</h4><p>Is een <strong>volledige zin</strong>: de boodschap van de schrijver.<br><em>Vraag: Wat wil de schrijver zeggen?</em></p></div>
+        </div>
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Voorbeeld: sociale media</div>
+          <div class="tekst">"Sociale media hebben een negatief effect op het zelfvertrouwen van tieners, omdat ze zichzelf voortdurend vergelijken met de perfecte beelden van anderen."</div>
+          <p style="margin-top:12px"><strong>Onderwerp:</strong> sociale media bij jongeren</p>
+          <p><strong>Hoofdgedachte:</strong> <span style="color:var(--blauw-mid)">Sociale media schaden het zelfvertrouwen van tieners.</span></p>
+        </div>
+        <div class="uitleg-blok">
+          <h4>Hoe vind je de hoofdgedachte?</h4>
+          <ul>
+            <li>Lees de <strong>eerste en laatste alinea</strong> goed</li>
+            <li>Stel de vraag: <em>Wat wil de schrijver mij duidelijk maken?</em></li>
+            <li>Formuleer een volledige zin – geen woordgroep</li>
+            <li>Controleer: past jouw zin bij elke alinea in de tekst?</li>
+          </ul>
+        </div>
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>De hoofdgedachte is <em>geen</em> woordgroep – altijd een volledige zin</li>
+            <li>Kopieer niet één-op-één een zin – formuleer in eigen woorden</li>
+            <li>Verwar het onderwerp met de hoofdgedachte</li>
+          </ul>
+        </div>
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-onderwerp">
+            <div class="quiz-teller" id="mq-onderwerp-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-onderwerp-vraag"></div>
+            <div class="antwoord-opties" id="mq-onderwerp-opties"></div>
+            <div class="quiz-feedback" id="mq-onderwerp-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-onderwerp-volgende" onclick="mqVolgende('onderwerp')" disabled>Volgende</button><span class="quiz-score" id="mq-onderwerp-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: HOOFDZAAK & BIJZAAK -->
+      <div class="content-panel" id="lezen-sg-hoofdzaak">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Hoofdzaak &amp; Bijzaak</h3>
+        <p class="intro-tekst">Niet alle informatie in een tekst is even belangrijk. Leer het verschil zien tussen wat echt telt en wat slechts extra is.</p>
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)"><h4>Hoofdzaak</h4><p>De <strong>kernboodschap</strong> van een alinea of tekst. Zonder deze informatie begrijp je het punt van de schrijver niet.</p></div>
+          <div class="card" style="border-left-color:#a0aec0"><h4>Bijzaak</h4><p><strong>Aanvullende informatie</strong>: voorbeelden, details, cijfers, anekdotes. Ze ondersteunen de hoofdzaak maar zijn niet de kern.</p></div>
+        </div>
+        <div class="uitleg-blok">
+          <h4>Hoe onderscheid je ze?</h4>
+          <ul>
+            <li>Verwijder de zin in gedachten – <em>mist de lezer dan het punt?</em> Dan is het een hoofdzaak.</li>
+            <li>Voegt de zin slechts een voorbeeld of getal toe? Dan is het een bijzaak.</li>
+            <li>Bijzaken staan vaak na <em>bijvoorbeeld, zoals, ter illustratie</em>.</li>
+          </ul>
+        </div>
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Alinea analyseren</div>
+          <div class="tekst"><span style="background:#dbeafe;padding:2px 6px;border-radius:4px">[Hoofdzaak]</span> <strong>Jongeren slapen gemiddeld te weinig.</strong> <span style="background:#f0fff4;padding:2px 6px;border-radius:4px">[Bijzaak]</span> Onderzoek toont aan dat 63% minder dan 8 uur per nacht slaapt. <span style="background:#f0fff4;padding:2px 6px;border-radius:4px">[Bijzaak]</span> Een 15-jarig meisje uit Rotterdam kijkt regelmatig tot middernacht op haar telefoon.</div>
+        </div>
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Cijfers en voorbeelden als hoofdzaak beschouwen – dat zijn bijzaken</li>
+            <li>Te veel bijzaken opnemen in een samenvatting</li>
+            <li>De kernzin van een alinea overslaan en alleen details noteren</li>
+          </ul>
+        </div>
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Maak een tabel met twee kolommen: <em>Hoofdzaak</em> en <em>Bijzaak</em>. Sorteer per alinea welke zinnen erin horen.</div></div>
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-hoofdzaak">
+            <div class="quiz-teller" id="mq-hoofdzaak-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-hoofdzaak-vraag"></div>
+            <div class="antwoord-opties" id="mq-hoofdzaak-opties"></div>
+            <div class="quiz-feedback" id="mq-hoofdzaak-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-hoofdzaak-volgende" onclick="mqVolgende('hoofdzaak')" disabled>Volgende</button><span class="quiz-score" id="mq-hoofdzaak-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 5: ACTIEF LEZEN -->
+      <div class="content-panel" id="lezen-sg-actieflezen">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Actief lezen</h3>
+        <p class="intro-tekst">Actief lezen betekent dat je meedenkt terwijl je leest: je stelt vragen, maakt aantekeningen en verbindt de tekst met wat je al weet.</p>
+        <div class="uitleg-blok">
+          <h4>Waarom actief lezen?</h4>
+          <p>Passief lezen – woorden zien zonder mee te denken – levert weinig op. Actieve lezers begrijpen teksten sneller, onthouden meer en beantwoorden vragen beter.</p>
+        </div>
+        <div class="stappenplan">
+          <div class="stap"><div class="stap-nr">1</div><div class="stap-inhoud"><h5>Vooraf: activeer voorkennis</h5><p>Wat weet je al over het onderwerp? Dit maakt je hersenen klaar.</p></div></div>
+          <div class="stap"><div class="stap-nr">2</div><div class="stap-inhoud"><h5>Tijdens: stel W-vragen</h5><p>Wie? Wat? Waar? Wanneer? Waarom? Hoe? Beantwoord ze terwijl je leest.</p></div></div>
+          <div class="stap"><div class="stap-nr">3</div><div class="stap-inhoud"><h5>Tijdens: onderstreep kernwoorden</h5><p>Markeer sleutelbegrippen, niet hele zinnen. Schrijf korte aantekeningen in de marge.</p></div></div>
+          <div class="stap"><div class="stap-nr">4</div><div class="stap-inhoud"><h5>Na afloop: verwerk</h5><p>Leg de tekst weg en vat in eigen woorden samen. Wat was de hoofdgedachte?</p></div></div>
+        </div>
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Actief lezen in de praktijk</div>
+          <div class="tekst">"Steeds meer scholen schakelen over op digitale leerboeken. Voorstanders wijzen op lagere kosten en actuele inhoud. Critici vrezen dat leerlingen minder goed lezen van een scherm."<br><br><strong>Actieve lezer denkt:</strong><br>— Welk standpunt neemt de schrijver in? (nog onduidelijk – neutraal)<br>— Wie zijn de 'critici'? (niet nader omschreven)<br>— Wat is het bewijs voor minder goed lezen? (ontbreekt – zwak argument?)<br><span style="color:var(--blauw-mid)">→ Deze vragen helpen bij het beantwoorden van toetsvragen.</span></div>
+        </div>
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Alles onderstrepen – dan valt niets meer op</li>
+            <li>Geen vragen stellen tijdens het lezen</li>
+            <li>Direct beginnen met lezen zonder te oriënteren</li>
+          </ul>
+        </div>
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Schrijf na elke alinea in één zin op wat de kernboodschap was. Als je dat niet kunt, herlees dan die alinea.</div></div>
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-actieflezen">
+            <div class="quiz-teller" id="mq-actieflezen-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-actieflezen-vraag"></div>
+            <div class="antwoord-opties" id="mq-actieflezen-opties"></div>
+            <div class="quiz-feedback" id="mq-actieflezen-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-actieflezen-volgende" onclick="mqVolgende('actieflezen')" disabled>Volgende</button><span class="quiz-score" id="mq-actieflezen-score"></span></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /groep strategiebasis -->
+
+    <!-- ===== GROEP 2: TEKSTBOUW ===== -->
+    <div class="tab-groep-panel" id="lezen-groep-tb">
+      <div class="sub-tabs">
+        <button class="sub-tab active" onclick="toonTabInGroep('lezen','tb','tekstdoel',this)">Tekstdoel &amp; Tekstvorm</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','tb','zakelijk',this)">Zakelijk &amp; Niet-zakelijk</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','tb','alineas',this)">Alinea's &amp; Kernzinnen</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','tb','opbouw',this)">Inleiding, Kern &amp; Slot</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','tb','signaalwoorden',this)">Tekstverbanden &amp; Signaalwoorden</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','tb','tekststructuren',this)">Tekststructuren</button>
+      </div>
+
+      <!-- TAB TB1: TEKSTDOEL, TEKSTSOORT EN TEKSTVORM -->
+      <div class="content-panel active" id="lezen-tb-tekstdoel">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Tekstdoel, tekstsoort en tekstvorm</h3>
+        <p class="intro-tekst">Elke tekst is gemaakt met een doel. Dat doel bepaalt welke <em>tekstsoort</em> de schrijver kiest en in welke <em>vorm</em> de tekst verschijnt.</p>
+
+        <div class="uitleg-blok">
+          <h4>Het tekstdoel: waarom is de tekst geschreven?</h4>
+          <ul>
+            <li><strong>Informeren</strong> – feiten en uitleg overbrengen</li>
+            <li><strong>Overtuigen</strong> – de lezer een mening bijbrengen</li>
+            <li><strong>Instrueren</strong> – de lezer stap voor stap begeleiden</li>
+            <li><strong>Amuseren</strong> – de lezer plezier geven</li>
+            <li><strong>Beschouwen</strong> – een onderwerp van meerdere kanten belichten</li>
+          </ul>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card"><h4>Informatieve tekst</h4><p><strong>Doel:</strong> informeren<br><em>Voorbeelden: krantenartikel, encyclopedie, schoolboektekst, nieuwsbericht</em></p></div>
+          <div class="card"><h4>Betoogende tekst</h4><p><strong>Doel:</strong> overtuigen<br><em>Voorbeelden: column, opiniestuk, ingezonden brief, reclametekst</em></p></div>
+          <div class="card"><h4>Instructieve tekst</h4><p><strong>Doel:</strong> instrueren<br><em>Voorbeelden: handleiding, recept, veiligheidsprotocol</em></p></div>
+          <div class="card"><h4>Verhalende tekst</h4><p><strong>Doel:</strong> vertellen / amuseren<br><em>Voorbeelden: roman, novelle, kort verhaal, graphic novel</em></p></div>
+          <div class="card"><h4>Beschouwende tekst</h4><p><strong>Doel:</strong> beschouwen<br><em>Voorbeelden: essay, recensie, boekenbespreking</em></p></div>
+          <div class="card"><h4>Poëtische tekst</h4><p><strong>Doel:</strong> uitdrukken / amuseren<br><em>Voorbeelden: gedicht, lied, sonnet, haiku</em></p></div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Tekstsoort vs. tekstvorm</h4>
+          <ul>
+            <li><strong>Tekstsoort</strong> = indeling op basis van <em>doel</em> (informatief, betogend, etc.)</li>
+            <li><strong>Tekstvorm</strong> = de concrete verschijningsvorm (artikel, brief, blog, speech, gedicht)</li>
+            <li>Eén tekstvorm kan meerdere doelen hebben: een column kan zowel informeren als overtuigen.</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Analyse: krantenartikel over vleesconsumptie</div>
+          <div class="tekst">
+            <strong>Tekstvorm:</strong> krantenartikel &nbsp;|&nbsp; <strong>Tekstsoort:</strong> informatief (objectieve feiten) of betogend (als de journalist een standpunt inneemt)<br><br>
+            <strong>Hoe herken je het?</strong><br>
+            — Informatief: geen meningen van de schrijver, alleen feiten en bronnen<br>
+            — Betogend: <em>"Wij moeten stoppen met vlees eten"</em> → mening + argumenten<br>
+            <span style="color:var(--blauw-mid)">Tip: kijk altijd eerst naar het tekstdoel vóór je de soort bepaalt.</span>
+          </div>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Tekstvorm en tekstsoort door elkaar halen: een blog is een <em>vorm</em>, niet een soort</li>
+            <li>Denken dat één tekst maar één doel kan hebben</li>
+            <li>Een tekst alleen op de vorm beoordelen zonder het doel te bepalen</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip havo/vwo:</strong> Stel bij elke tekst drie vragen: Wat wil de schrijver bereiken? Wie is het publiek? In welke situatie verschijnt de tekst? Die drie samen bepalen de soort én de vorm.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-tekstdoel">
+            <div class="quiz-teller" id="mq-tekstdoel-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-tekstdoel-vraag"></div>
+            <div class="antwoord-opties" id="mq-tekstdoel-opties"></div>
+            <div class="quiz-feedback" id="mq-tekstdoel-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-tekstdoel-volgende" onclick="mqVolgende('tekstdoel')" disabled>Volgende</button><span class="quiz-score" id="mq-tekstdoel-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB TB2: ZAKELIJK & NIET-ZAKELIJK -->
+      <div class="content-panel" id="lezen-tb-zakelijk">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Zakelijke en niet-zakelijke teksten</h3>
+        <p class="intro-tekst">Het grootste onderscheid in tekstsoorten is het verschil tussen zakelijk en niet-zakelijk. Dit bepaalt de toon, het doel en de manier van schrijven.</p>
+
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)">
+            <h4>Zakelijke tekst</h4>
+            <p>Gericht op <strong>informatieoverdracht</strong>. Objectief, feitelijk, gestructureerd. De schrijver staat op de achtergrond.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Voorbeelden: nieuwsbericht, rapport, handleiding, schoolboek, recept, brief</em></p>
+          </div>
+          <div class="card" style="border-left-color:var(--groen)">
+            <h4>Niet-zakelijke tekst</h4>
+            <p>Gericht op <strong>beleving en expressie</strong>. Subjectief, beeldend, persoonlijk. De schrijver staat centraal.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Voorbeelden: roman, gedicht, dagboek, persoonlijk essay, spoken word</em></p>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Kenmerken zakelijke teksten</h4>
+          <ul>
+            <li>Feiten, cijfers en bronvermelding</li>
+            <li>Logische, heldere structuur (inleiding-kern-slot)</li>
+            <li>Formele taal, geen beeldspraak</li>
+            <li>Doel staat centraal (informeren, overtuigen, instrueren)</li>
+          </ul>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Kenmerken niet-zakelijke teksten</h4>
+          <ul>
+            <li>Beeldend taalgebruik: metaforen, symboliek, rijm</li>
+            <li>Persoonlijke stem en perspectief</li>
+            <li>Emotie en sfeer als doel</li>
+            <li>Vrije of poëtische structuur mogelijk</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Dezelfde inhoud – twee stijlen</div>
+          <div class="tekst">
+            <strong>Zakelijk (informatief):</strong><br>
+            "Het aantal daklozen in Nederland steeg in 2023 met 12% ten opzichte van het vorige jaar. Volgens het CBS zijn er nu circa 36.000 dakloze mensen."<br><br>
+            <strong>Niet-zakelijk (literair):</strong><br>
+            "Hij sliep op een matras van regen. De stad draaide om hem heen als een wiel dat hem had afgeworpen – hij was nergens meer de spil."<br><br>
+            <span style="color:var(--blauw-mid)">Zelfde onderwerp, compleet ander doel en effect.</span>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Grijze zone: de column en het essay</h4>
+          <p>Een column en essay zitten <em>tussen</em> zakelijk en niet-zakelijk in: ze gebruiken een persoonlijke toon en beeldend taalgebruik, maar hebben ook een duidelijk zakelijk doel (overtuigen of beschouwen). Voor het examen worden ze meestal als <strong>zakelijk</strong> geclassificeerd.</p>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Een column als niet-zakelijk bestempelen omdat de schrijver zijn mening geeft</li>
+            <li>Denken dat zakelijke teksten altijd saai en droog zijn</li>
+            <li>Literaire non-fictie (bijv. een biografie) als zakelijk beschouwen – het hangt af van de schrijfstijl</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Stel jezelf de vraag: staat de <em>informatie</em> centraal of de <em>beleving</em>? Informatie = zakelijk. Beleving = niet-zakelijk.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-zakelijk">
+            <div class="quiz-teller" id="mq-zakelijk-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-zakelijk-vraag"></div>
+            <div class="antwoord-opties" id="mq-zakelijk-opties"></div>
+            <div class="quiz-feedback" id="mq-zakelijk-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-zakelijk-volgende" onclick="mqVolgende('zakelijk')" disabled>Volgende</button><span class="quiz-score" id="mq-zakelijk-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB TB3: ALINEA'S & KERNZINNEN -->
+      <div class="content-panel" id="lezen-tb-alineas">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Alinea's en kernzinnen</h3>
+        <p class="intro-tekst">Een tekst is opgebouwd uit alinea's. Elke alinea behandelt <em>één gedachte</em> en bevat een kernzin die die gedachte samenvat.</p>
+
+        <div class="uitleg-blok">
+          <h4>Wat is een alinea?</h4>
+          <ul>
+            <li>Een alinea gaat over <strong>één onderwerp of gedachte</strong></li>
+            <li>Begint op een nieuwe regel, vaak met inspringing of een witregel</li>
+            <li>Bevat minimaal twee zinnen</li>
+            <li>Is verbonden met andere alinea's via signaalwoorden</li>
+          </ul>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>De kernzin</h4>
+          <ul>
+            <li>Geeft de <strong>kern van de alinea</strong> in één zin</li>
+            <li>Staat <strong>meestal aan het begin</strong> (deductief), soms aan het einde (inductief)</li>
+            <li>De overige zinnen leggen de kernzin uit met bewijs, voorbeelden of uitleg</li>
+            <li>Soms is de kernzin impliciet – dan moet je hem zelf formuleren</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Alinea analyseren</div>
+          <div class="tekst">
+            <span style="color:var(--blauw-mid);font-weight:700">[Kernzin]</span> Bewegen heeft veel voordelen voor je gezondheid. <span style="color:#718096">[Uitleg]</span> Als je regelmatig sport, wordt je conditie beter en je spieren sterker. <span style="color:#718096">[Voorbeeld]</span> Zo vermindert hardlopen de kans op hart- en vaatziekten met wel 35%. <span style="color:#718096">[Conclusie]</span> Wie beweegt, investeert dus in een langer en gezonder leven.
+          </div>
+          <p style="margin-top:10px;font-size:0.85rem;color:#555">Kernzin = eerste zin. De rest onderbouwt en illustreert.</p>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Inductieve opbouw (kernzin aan het eind)</div>
+          <div class="tekst">
+            <span style="color:#718096">[Bewijs]</span> Leerlingen die meer dan twee uur per dag gamen, presteren slechter op school. <span style="color:#718096">[Bewijs]</span> Hun concentratiespanne is korter en ze slapen gemiddeld een uur minder. <span style="color:var(--blauw-mid);font-weight:700">[Kernzin aan het eind]</span> Overmatig gamen heeft dus duidelijke negatieve effecten op schoolprestaties.
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Stappenplan: kernzin vinden</h4>
+          <ul>
+            <li><strong>Stap 1:</strong> Lees de alinea twee keer</li>
+            <li><strong>Stap 2:</strong> Stel de vraag: Waarover gaat deze alinea in één zin?</li>
+            <li><strong>Stap 3:</strong> Zoek de zin die die vraag het best beantwoordt</li>
+            <li><strong>Stap 4:</strong> Controleer: zijn alle andere zinnen uitleg of bewijs bij die zin?</li>
+          </ul>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>De eerste zin automatisch als kernzin aanwijzen – dat klopt niet altijd</li>
+            <li>Een voorbeeld (bijzaak) als kernzin aanwijzen</li>
+            <li>De kernzin te uitgebreid formuleren – één zin is genoeg</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Streep alle voorbeelden, cijfers en anekdotes weg. Wat overblijft bevat de kernzin.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-alineas">
+            <div class="quiz-teller" id="mq-alineas-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-alineas-vraag"></div>
+            <div class="antwoord-opties" id="mq-alineas-opties"></div>
+            <div class="quiz-feedback" id="mq-alineas-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-alineas-volgende" onclick="mqVolgende('alineas')" disabled>Volgende</button><span class="quiz-score" id="mq-alineas-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB TB4: INLEIDING, KERN & SLOT -->
+      <div class="content-panel" id="lezen-tb-opbouw">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Inleiding, kern en slot</h3>
+        <p class="intro-tekst">De meeste zakelijke teksten volgen een vaste driedeling: inleiding, kern en slot. Elk deel heeft een eigen functie.</p>
+
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)">
+            <h4>Inleiding</h4>
+            <p>Introduceert het onderwerp en trekt de aandacht. Bevat vaak de <strong>aanleiding</strong> en de <strong>hoofdgedachte of probleemstelling</strong>.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)">Omvang: ±10% van de tekst</p>
+          </div>
+          <div class="card" style="border-left-color:var(--groen)">
+            <h4>Kern</h4>
+            <p>De uitwerking: feiten, argumenten, voorbeelden en bewijs die de hoofdgedachte ondersteunen. Het grootste deel van de tekst.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)">Omvang: ±80% van de tekst</p>
+          </div>
+          <div class="card" style="border-left-color:#e2b007">
+            <h4>Slot</h4>
+            <p>Sluit af met een <strong>conclusie, samenvatting of oproep</strong>. Verwijst terug naar de inleiding of geeft een boodschap mee.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:var(--blauw-mid)">Omvang: ±10% van de tekst</p>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Functies van de inleiding</h4>
+          <ul>
+            <li><strong>Aandacht trekken</strong> – beginnen met een vraag, anekdote, stelling of verrassend feit</li>
+            <li><strong>Context geven</strong> – het onderwerp en de aanleiding uitleggen</li>
+            <li><strong>Hoofdgedachte aankondigen</strong> – de kern van het betoog of de informatie kort duiden</li>
+          </ul>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Functies van het slot</h4>
+          <ul>
+            <li><strong>Conclusie</strong> – wat volgt uit alles wat er gezegd is?</li>
+            <li><strong>Samenvatting</strong> – de belangrijkste punten op een rij</li>
+            <li><strong>Oproep tot actie</strong> – de lezer aansporen iets te doen</li>
+            <li><strong>Cirkelstructuur</strong> – terugkeren naar het begin (aansluiten bij de inleiding)</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Tekst analyse: schoolkantine</div>
+          <div class="tekst">
+            <strong style="color:var(--blauw)">[Inleiding]</strong> "Elke dag kiezen duizenden middelbare scholieren voor een kroket of een zak chips. Toch weet iedereen dat gezond eten beter is. Waarom lukt het dan niet?"<br><br>
+            <strong style="color:var(--groen)">[Kern]</strong> Alinea's over: ongezond aanbod in de kantine / prijsverschil / gewoonten / invloed van peers.<br><br>
+            <strong style="color:#e2b007">[Slot]</strong> "De kantine is meer dan een plek om te eten. Het is een leeromgeving. Het is tijd dat scholen die kans benutten."
+          </div>
+          <p style="margin-top:10px;font-size:0.85rem;color:#555">Slot met oproep tot actie → betoogtekst</p>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Een slot dat alleen de kern herhaalt zonder conclusie of boodschap</li>
+            <li>Een inleiding die te lang is en al te veel uitwerkt</li>
+            <li>Geen duidelijke overgang tussen inleiding en kern</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Lees bij een onbekende tekst altijd de inleiding én het slot vóór de rest. Zo ken je al de hoofdgedachte en conclusie.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-opbouw">
+            <div class="quiz-teller" id="mq-opbouw-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-opbouw-vraag"></div>
+            <div class="antwoord-opties" id="mq-opbouw-opties"></div>
+            <div class="quiz-feedback" id="mq-opbouw-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-opbouw-volgende" onclick="mqVolgende('opbouw')" disabled>Volgende</button><span class="quiz-score" id="mq-opbouw-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB TB5: TEKSTVERBANDEN & SIGNAALWOORDEN -->
+      <div class="content-panel" id="lezen-tb-signaalwoorden">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Tekstverbanden, signaalwoorden en functiewoorden</h3>
+        <p class="intro-tekst">Zinnen en alinea's hangen niet los van elkaar – ze zijn verbonden via tekstverbanden. Signaalwoorden en functiewoorden maken die verbanden zichtbaar.</p>
+
+        <div class="uitleg-blok">
+          <h4>Wat is een tekstverband?</h4>
+          <p>Een tekstverband beschrijft de <strong>logische relatie</strong> tussen twee zinnen of alinea's. Door het verband te herkennen begrijp je hoe de informatie samenhangt.</p>
+        </div>
+
+        <table class="sw-tabel">
+          <tr><th>Tekstverband</th><th>Signaalwoorden</th><th>Wat het zegt</th></tr>
+          <tr><td><span class="badge">Opsomming</span></td><td>ten eerste, bovendien, ook, verder, daarnaast, ten slotte</td><td>Punten bij elkaar zetten</td></tr>
+          <tr><td><span class="badge">Oorzaak – gevolg</span></td><td>omdat, doordat, waardoor, dus, zodat, daardoor</td><td>Reden → Resultaat</td></tr>
+          <tr><td><span class="badge">Tegenstelling</span></td><td>maar, echter, toch, hoewel, terwijl, daarentegen, anderzijds</td><td>Contrast of onverwachte wending</td></tr>
+          <tr><td><span class="badge">Voorbeeld</span></td><td>bijvoorbeeld, zoals, zo, denk aan, ter illustratie</td><td>Concretisering van een bewering</td></tr>
+          <tr><td><span class="badge">Samenvatting</span></td><td>kortom, samengevat, concluderend, al met al</td><td>Conclusie of kernboodschap</td></tr>
+          <tr><td><span class="badge">Voorwaarde</span></td><td>als, wanneer, mits, tenzij, indien</td><td>Conditie waaronder iets geldt</td></tr>
+          <tr><td><span class="badge">Vergelijking</span></td><td>net als, in vergelijking met, eveneens, ook, net zo</td><td>Overeenkomst tussen twee zaken</td></tr>
+          <tr><td><span class="badge">Tijdvolgorde</span></td><td>eerst, daarna, vervolgens, uiteindelijk, ten slotte</td><td>Volgorde in de tijd</td></tr>
+          <tr><td><span class="badge">Uitwerking</span></td><td>namelijk, want, dat wil zeggen, immers, met andere woorden</td><td>Uitleg of verduidelijking</td></tr>
+          <tr><td><span class="badge">Doel</span></td><td>om te, zodat, teneinde, met als doel</td><td>Waarom iets gedaan wordt</td></tr>
+        </table>
+
+        <div class="uitleg-blok" style="margin-top:20px">
+          <h4>Functiewoorden vs. signaalwoorden</h4>
+          <ul>
+            <li><strong>Signaalwoorden</strong> markeren een tekstverband expliciet: <em>dus, echter, bovendien</em></li>
+            <li><strong>Functiewoorden</strong> verbinden woorden en zinsdelen structureel: voegwoorden (<em>en, maar, omdat</em>), voorzetsels (<em>in, op, voor</em>), voornaamwoorden (<em>dit, dat, die</em>)</li>
+            <li>Functiewoorden dragen weinig inhoudelijke betekenis maar zorgen voor samenhang</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Signaalwoord herkennen in context</div>
+          <div class="tekst">
+            "Jongeren bewegen steeds minder. <strong style="color:var(--blauw-mid)">Bovendien</strong> eten ze ongezonder dan vroeger. <strong style="color:var(--blauw-mid)">Daardoor</strong> stijgt het aantal jongeren met overgewicht."<br><br>
+            <em>Bovendien</em> = opsomming (extra punt toevoegen)<br>
+            <em>Daardoor</em> = oorzaak-gevolg (gevolg van het vorige)
+          </div>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Tekstverband zonder signaalwoord</div>
+          <div class="tekst">
+            "Het regent. De wedstrijd gaat niet door."<br><br>
+            Hier staat geen signaalwoord, maar het verband is duidelijk: <strong>oorzaak – gevolg</strong>.<br>
+            <span style="color:var(--blauw-mid)">Tip: je kunt het verband testen door <em>dus</em> of <em>omdat</em> in te voegen.</span>
+          </div>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li><em>Maar</em> altijd als tegenstelling zien – het kan ook een nuancering zijn</li>
+            <li>Vergeten dat tekstverbanden ook impliciet kunnen zijn (zonder signaalwoord)</li>
+            <li><em>Ten slotte</em> als samenvatting benoemen – het kan ook tijdvolgorde zijn</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip voor examen:</strong> Als je een vraag krijgt naar het tekstverband, lees dan de twee zinnen rondom het signaalwoord. Vraag je af: wat doet de tweede zin met de eerste? Dat is je verband.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-signaalwoorden">
+            <div class="quiz-teller" id="mq-signaalwoorden-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-signaalwoorden-vraag"></div>
+            <div class="antwoord-opties" id="mq-signaalwoorden-opties"></div>
+            <div class="quiz-feedback" id="mq-signaalwoorden-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-signaalwoorden-volgende" onclick="mqVolgende('signaalwoorden')" disabled>Volgende</button><span class="quiz-score" id="mq-signaalwoorden-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB TB6: TEKSTSTRUCTUREN -->
+      <div class="content-panel" id="lezen-tb-tekststructuren">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Tekststructuren</h3>
+        <p class="intro-tekst">De manier waarop informatie geordend is, noemen we de tekststructuur. Er zijn vijf basisstructuren die steeds terugkomen in zakelijke teksten.</p>
+
+        <div class="uitleg-blok">
+          <h4>Waarom is tekststructuur belangrijk?</h4>
+          <p>Als je weet welke structuur een tekst heeft, begrijp je beter hoe de informatie samenhangt en kun je sneller de hoofdzaken vinden. Het helpt ook bij het samenvatten en het beantwoorden van vragen.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)">
+            <h4>1. Beschrijving</h4>
+            <p>Eigenschappen, kenmerken of feiten over een onderwerp worden op een rij gezet.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:#718096"><strong>Signaalwoorden:</strong> is, heeft, bestaat uit, kenmerkt zich door</p>
+            <p style="font-size:0.83rem"><em>Voorbeeld: tekst over het leven van een dolfijn</em></p>
+          </div>
+          <div class="card" style="border-left-color:var(--groen)">
+            <h4>2. Chronologie</h4>
+            <p>Gebeurtenissen of stappen worden in volgorde van tijd gepresenteerd.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:#718096"><strong>Signaalwoorden:</strong> eerst, daarna, vervolgens, tot slot, in 1945</p>
+            <p style="font-size:0.83rem"><em>Voorbeeld: historisch overzicht, recept, stappenplan</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e2b007">
+            <h4>3. Oorzaak – gevolg</h4>
+            <p>De relatie tussen een situatie en de effecten ervan staat centraal.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:#718096"><strong>Signaalwoorden:</strong> omdat, doordat, waardoor, dus, als gevolg van</p>
+            <p style="font-size:0.83rem"><em>Voorbeeld: artikel over klimaatverandering</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e53e3e">
+            <h4>4. Probleem – oplossing</h4>
+            <p>Een probleem wordt beschreven, gevolgd door één of meer oplossingen.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:#718096"><strong>Signaalwoorden:</strong> het probleem is, een oplossing is, men kan, een aanpak die werkt</p>
+            <p style="font-size:0.83rem"><em>Voorbeeld: column over dakloosheid</em></p>
+          </div>
+          <div class="card" style="border-left-color:#9f7aea">
+            <h4>5. Vergelijking</h4>
+            <p>Twee of meer zaken worden naast elkaar gezet om overeenkomsten en/of verschillen te laten zien.</p>
+            <p style="margin-top:8px;font-size:0.83rem;color:#718096"><strong>Signaalwoorden:</strong> in tegenstelling tot, net als, verschilt van, terwijl, eveneens</p>
+            <p style="font-size:0.83rem"><em>Voorbeeld: artikel over twee politieke partijen</em></p>
+          </div>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Structuur herkennen: oorzaak – gevolg</div>
+          <div class="tekst">
+            "Door de stijgende zeespiegel overstromen kustregio's vaker. <strong style="color:var(--blauw-mid)">Daardoor</strong> moeten miljoenen mensen hun huis verlaten. <strong style="color:var(--blauw-mid)">Dit leidt</strong> op zijn beurt tot grootschalige migratie naar het binnenland."<br><br>
+            <strong>Structuur:</strong> oorzaak (zeespiegel stijgt) → gevolg 1 (overstroming) → gevolg 2 (mensen vluchten) → gevolg 3 (migratie)<br>
+            <span style="color:var(--blauw-mid)">Soms is er een <em>keten</em> van oorzaken en gevolgen.</span>
+          </div>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Structuur herkennen: probleem – oplossing</div>
+          <div class="tekst">
+            <strong>[Probleem]</strong> "Veel scholen kampen met een lerarentekort. Klassen worden groter en leerlingen krijgen minder aandacht."<br>
+            <strong>[Oplossing 1]</strong> "Een hogere leraarssalaris zou de beroepsgroep aantrekkelijker maken."<br>
+            <strong>[Oplossing 2]</strong> "Hybride onderwijs – deels online – kan de werkdruk verlichten."<br><br>
+            <span style="color:var(--blauw-mid)">Herkenbaar: eerst het probleem geschetst, dan alternatieven aangeboden.</span>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Combinaties van structuren</h4>
+          <p>Veel teksten gebruiken meerdere structuren tegelijk. Een artikel kan beginnen met een <strong>beschrijving</strong> van een probleem, vervolgens de <strong>oorzaken</strong> benoemen en eindigen met een <strong>vergelijking</strong> van oplossingen. Kijk altijd naar de <em>dominante</em> structuur van de tekst als geheel.</p>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Chronologie en opsomming door elkaar halen – chronologie heeft een tijdsvolgorde, opsomming niet</li>
+            <li>Een tekst als "vergelijking" bestempelen als er maar één punt is waarop vergeleken wordt</li>
+            <li>Vergeten dat de inleiding en het slot vaak een andere structuur hebben dan de kern</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip havo/vwo:</strong> Teken een schematische weergave van de tekststructuur (bijv. een pijldiagram voor oorzaak-gevolg of een Venn-diagram voor vergelijking). Dit helpt bij het analyseren én het samenvatten.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-tekststructuren">
+            <div class="quiz-teller" id="mq-tekststructuren-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-tekststructuren-vraag"></div>
+            <div class="antwoord-opties" id="mq-tekststructuren-opties"></div>
+            <div class="quiz-feedback" id="mq-tekststructuren-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-tekststructuren-volgende" onclick="mqVolgende('tekststructuren')" disabled>Volgende</button><span class="quiz-score" id="mq-tekststructuren-score"></span></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /groep tekstbouw -->
+
+    <!-- ===== GROEP 3: ARGUMENTATIE ===== -->
+    <div class="tab-groep-panel" id="lezen-groep-vd">
+      <div class="sub-tabs">
+        <button class="sub-tab active" onclick="toonTabInGroep('lezen','vd','feit-mening',this)">Feit, Mening, Argument &amp; Standpunt</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','vd','objectief',this)">Objectief &amp; Subjectief</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','vd','argumentatie',this)">Argumentatie</button>
+        <button class="sub-tab" onclick="toonTabInGroep('lezen','vd','quiz-lezen',this)">Quiz</button>
+      </div>
+
+      <!-- TAB VD1: FEIT, MENING, ARGUMENT & STANDPUNT -->
+      <div class="content-panel active" id="lezen-vd-feit-mening">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Feit, mening, argument en standpunt</h3>
+        <p class="intro-tekst">Begrijpen wat iemand beweert en op welke basis? Dan moet je vier begrippen helder uit elkaar houden: feit, mening, argument en standpunt.</p>
+
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)">
+            <h4>Feit</h4>
+            <p>Een bewering die je kunt <strong>controleren en bewijzen</strong>. Feiten zijn objectief en onafhankelijk van mening.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>"De aarde draait om de zon."<br>"In 2022 waren er 17,9 miljoen inwoners in Nederland."</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e53e3e">
+            <h4>Mening</h4>
+            <p>Een persoonlijke opvatting of oordeel. <strong>Niet objectief bewijsbaar</strong> – iemand anders kan er anders over denken.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>"Nederland is het mooiste land ter wereld."<br>"Die film was echt geweldig."</em></p>
+          </div>
+          <div class="card" style="border-left-color:var(--groen)">
+            <h4>Standpunt</h4>
+            <p>Een <strong>duidelijk geformuleerde mening</strong> die de schrijver of spreker inneemt en wil verdedigen.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>"Sociale media zouden verboden moeten worden voor jongeren onder de 16."</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e2b007">
+            <h4>Argument</h4>
+            <p>Een <strong>reden of bewijs</strong> dat een standpunt ondersteunt of weerlegt. Goede argumenten zijn relevant en zo feitelijk mogelijk.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>"Want uit onderzoek blijkt dat jongeren hierdoor slechter slapen."</em></p>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Signaalwoorden voor meningen</h4>
+          <ul>
+            <li><strong>Persoonlijke uitdrukkingen:</strong> ik vind, ik denk, naar mijn mening, volgens mij, in mijn ogen</li>
+            <li><strong>Evaluerende bijwoorden:</strong> gelukkig, helaas, jammer genoeg, terecht, onterecht</li>
+            <li><strong>Waarderende bijvoeglijke naamwoorden:</strong> slecht, uitstekend, gevaarlijk, prachtig, onacceptabel</li>
+            <li><strong>Modale werkwoorden:</strong> zou moeten, moet, mag niet, dient te</li>
+          </ul>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Signaalwoorden voor feiten</h4>
+          <ul>
+            <li><strong>Bronverwijzing:</strong> blijkt uit onderzoek, volgens het CBS, studies tonen aan</li>
+            <li><strong>Cijfers en data:</strong> 63%, in 2023, gemiddeld, per jaar</li>
+            <li><strong>Verificeerbare beweringen:</strong> "De wet bepaalt...", "Het rapport stelt..."</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Analyseer: feit of mening?</div>
+          <div class="tekst">
+            1. "Jongeren spenderen gemiddeld 4 uur per dag op hun telefoon." <span style="color:var(--blauw-mid)">→ Feit (meetbaar, verifieerbaar)</span><br>
+            2. "Dat is veel te veel." <span style="color:#e53e3e">→ Mening (subjectief oordeel)</span><br>
+            3. "De overheid moet schermtijd beperken." <span style="color:var(--groen)">→ Standpunt (geformuleerde mening)</span><br>
+            4. "Want te veel schermtijd leidt tot slaapproblemen." <span style="color:#e2b007">→ Argument (onderbouwt het standpunt)</span>
+          </div>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Een mening als feit presenteren – let op ontbrekende bronnen en subjectief taalgebruik</li>
+            <li>Feiten die niet kloppen als bewijskrachtig argument gebruiken</li>
+            <li>Standpunt en mening verwarren: een standpunt is bewust geformuleerd en te verdedigen</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip havo/vwo:</strong> Bij een examentekst: onderstreep elk signaalwoord voor meningen. Vraag jezelf dan af: wat verdedigt de schrijver? Dat is het standpunt. Waarom? Dat zijn de argumenten.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-feit-mening">
+            <div class="quiz-teller" id="mq-feit-mening-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-feit-mening-vraag"></div>
+            <div class="antwoord-opties" id="mq-feit-mening-opties"></div>
+            <div class="quiz-feedback" id="mq-feit-mening-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-feit-mening-volgende" onclick="mqVolgende('feit-mening')" disabled>Volgende</button><span class="quiz-score" id="mq-feit-mening-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB VD2: OBJECTIEF & SUBJECTIEF -->
+      <div class="content-panel" id="lezen-vd-objectief">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Objectief en subjectief</h3>
+        <p class="intro-tekst">Objectief en subjectief beschrijven in hoeverre een tekst of uitspraak vrij is van persoonlijke gevoelens, meningen of belangen.</p>
+
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--blauw)">
+            <h4>Objectief</h4>
+            <p>Gebaseerd op <strong>feiten en waarneembare gegevens</strong>. Onafhankelijk van persoonlijke gevoelens of belangen. Iedereen kan het controleren.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Kenmerken: neutraal taalgebruik, bronnen, cijfers, verifieerbare feiten</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e53e3e">
+            <h4>Subjectief</h4>
+            <p>Gekleurd door <strong>persoonlijke ervaring, gevoel of belang</strong>. De schrijver drukt zijn eigen perspectief uit.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Kenmerken: ik-perspectief, waarderende woorden, emotie, meningen</em></p>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Objectiviteit herkennen</h4>
+          <ul>
+            <li>Feitelijke informatie met bronvermelding</li>
+            <li>Neutrale toon – geen oordeel van de schrijver</li>
+            <li>Cijfers, data, namen, plaatsen</li>
+            <li>Passieve zinnen: "Er is vastgesteld dat..." / "Onderzoek wijst uit..."</li>
+          </ul>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Subjectiviteit herkennen</h4>
+          <ul>
+            <li>Meningen en beoordelingen van de schrijver</li>
+            <li>Emotioneel geladen woorden: verschrikkelijk, prachtig, eindelijk, helaas</li>
+            <li>Persoonlijke ervaringen of herinneringen</li>
+            <li>Ironie en sarcasme</li>
+            <li>Gebruik van "ik", "wij", "je"</li>
+          </ul>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Objectief vs. subjectief over klimaat</div>
+          <div class="tekst">
+            <strong style="color:var(--blauw)">Objectief:</strong> "Volgens het KNMI is de gemiddelde temperatuur in Nederland de afgelopen 100 jaar met 2,3 graden gestegen."<br><br>
+            <strong style="color:#e53e3e">Subjectief:</strong> "Het is schokkend dat we de planeet zo rücksichtslos vernietigen. We moeten nú in actie komen, voordat het te laat is!"<br><br>
+            <span style="color:var(--blauw-mid)">De eerste zin is controleerbaar en neutraal. De tweede drukt emotie en een persoonlijk oordeel uit.</span>
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Relatieve objectiviteit</h4>
+          <p>Totale objectiviteit bestaat bijna nooit – elk mens heeft een perspectief. In de praktijk gaat het om een <em>spectrum</em>: meer of minder objectief. Wetenschappelijke rapporten zijn het meest objectief; persoonlijke columns zijn het minst objectief.</p>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Subjectieve teksten als betrouwbaar feitenbron gebruiken</li>
+            <li>Denken dat krantenartikelen altijd objectief zijn – ook journalisten hebben een perspectief</li>
+            <li>Objectief verwarren met correct: een objectief geschreven tekst kan fouten bevatten</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip:</strong> Stel je voor dat je de tekst schreef als iemand met een totaal andere mening. Zou je dan dezelfde woorden kiezen? Als het antwoord nee is, is de tekst subjectief.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-objectief">
+            <div class="quiz-teller" id="mq-objectief-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-objectief-vraag"></div>
+            <div class="antwoord-opties" id="mq-objectief-opties"></div>
+            <div class="quiz-feedback" id="mq-objectief-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-objectief-volgende" onclick="mqVolgende('objectief')" disabled>Volgende</button><span class="quiz-score" id="mq-objectief-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB VD3: ARGUMENTATIE -->
+      <div class="content-panel" id="lezen-vd-argumentatie">
+        <h3 class="onderdeel-titel"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Argumentatie</h3>
+        <p class="intro-tekst">Argumentatie is het onderbouwen van een standpunt met redenen. Een sterke argumentatie is logisch, relevant en gebaseerd op feiten.</p>
+
+        <div class="uitleg-blok">
+          <h4>De basisstructuur van een betoog</h4>
+          <ul>
+            <li><strong>Standpunt</strong> – de centrale mening die verdedigd wordt</li>
+            <li><strong>Argument</strong> – een reden die het standpunt ondersteunt</li>
+            <li><strong>Tegenargument</strong> – een argument tégen het standpunt</li>
+            <li><strong>Weerlegging</strong> – het ontkrachten van het tegenargument</li>
+            <li><strong>Conclusie</strong> – het herhalen of versterken van het standpunt</li>
+          </ul>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card" style="border-left-color:var(--groen)">
+            <h4>Standpunt</h4>
+            <p>De mening van de schrijver. Duidelijk geformuleerd, verdedigbaar.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Signaal: "Ik vind dat...", "Wij moeten...", "Het is hoog tijd dat..."</em></p>
+          </div>
+          <div class="card" style="border-left-color:var(--blauw)">
+            <h4>Argument</h4>
+            <p>Reden die het standpunt ondersteunt. Zo feitelijk en relevant mogelijk.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Signaal: "Want...", "Omdat...", "Dit blijkt uit...", "Immers..."</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e53e3e">
+            <h4>Tegenargument</h4>
+            <p>Argument dat tégen het standpunt ingaat. Schrijvers noemen dit om eerlijk te zijn.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Signaal: "Tegenstanders zeggen dat...", "Men kan aanvoeren dat...", "Weliswaar..."</em></p>
+          </div>
+          <div class="card" style="border-left-color:#e2b007">
+            <h4>Weerlegging</h4>
+            <p>Ontkracht het tegenargument. Versterkt het eigen standpunt.</p>
+            <p style="margin-top:8px;font-size:0.83rem"><em>Signaal: "Maar toch...", "Dit klopt echter niet...", "Desondanks..."</em></p>
+          </div>
+        </div>
+
+        <div class="voorbeeld">
+          <div class="voorbeeld-label">Volledige argumentatiestructuur</div>
+          <div class="tekst">
+            <strong style="color:var(--groen)">[Standpunt]</strong> Scholen zouden mobiele telefoons tijdens lessen moeten verbieden.<br>
+            <strong style="color:var(--blauw)">[Argument 1]</strong> Want uit onderzoek blijkt dat leerlingen die hun telefoon wegleggen gemiddeld hogere cijfers halen.<br>
+            <strong style="color:var(--blauw)">[Argument 2]</strong> Bovendien vermindert een telefoonvrije klas de sociale druk van sociale media.<br>
+            <strong style="color:#e53e3e">[Tegenargument]</strong> Weliswaar stellen sommigen dat leerlingen hun telefoon nodig hebben voor educatieve apps.<br>
+            <strong style="color:#e2b007">[Weerlegging]</strong> Dit kan echter ook op een schooltablet of computer, waardoor een telefoonverbod geen leerverliezen hoeft op te leveren.<br>
+            <strong style="color:var(--groen)">[Conclusie]</strong> Kortom: een telefoonverbod bevordert de leeromgeving zonder de onderwijskwaliteit te schaden.
+          </div>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Soorten argumenten</h4>
+          <ul>
+            <li><strong>Feitelijk argument:</strong> gebaseerd op verifieerbare feiten en data</li>
+            <li><strong>Logisch argument:</strong> redenering op basis van oorzaak-gevolg of analogie</li>
+            <li><strong>Emotioneel argument:</strong> appel op gevoel of waarden (minder sterk in zakelijke teksten)</li>
+            <li><strong>Autoriteitsargument:</strong> experts of bronnen aanhalen</li>
+          </ul>
+        </div>
+
+        <div class="uitleg-blok">
+          <h4>Drogredenen herkennen (havo/vwo)</h4>
+          <p>Een drogreden lijkt een argument maar is dat niet. Voorbeelden:</p>
+          <ul>
+            <li><strong>Ad hominem:</strong> de persoon aanvallen in plaats van het argument</li>
+            <li><strong>Stroman:</strong> een verzwakt versie van het standpunt weerleggen</li>
+            <li><strong>Appel aan autoriteit:</strong> "Iedereen weet dat..." – wie is 'iedereen'?</li>
+            <li><strong>Valse dichotomie:</strong> "Of je bent voor ons, of je bent tegen ons"</li>
+          </ul>
+        </div>
+
+        <div class="fout-blok">
+          <h4>Veelgemaakte fouten</h4>
+          <ul>
+            <li>Argument en standpunt verwisselen – een argument is altijd een reden bij een standpunt</li>
+            <li>Denken dat meer argumenten automatisch een sterker betoog maken</li>
+            <li>Emotionele argumenten accepteren als feiten</li>
+            <li>Het tegenargument niet weerleggen maar negeren</li>
+          </ul>
+        </div>
+
+        <div class="tip-blok"><div class="tip-icon">💡</div><div><strong>Tip voor examen:</strong> Zoek bij elk argument het signaalwoord (want, omdat, immers). Zoek het standpunt bij elk argument door te vragen: "Welke mening wil de schrijver bewijzen?" Zo bouw je de argumentatiestructuur snel op.</div></div>
+
+        <div class="quiz-wrapper" style="margin-top:24px">
+          <div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Check je kennis</div>
+          <div id="mq-argumentatie">
+            <div class="quiz-teller" id="mq-argumentatie-teller">Vraag 1 van 3</div>
+            <div class="vraag-tekst" id="mq-argumentatie-vraag"></div>
+            <div class="antwoord-opties" id="mq-argumentatie-opties"></div>
+            <div class="quiz-feedback" id="mq-argumentatie-feedback"></div>
+            <div class="quiz-nav"><button class="quiz-btn" id="mq-argumentatie-volgende" onclick="mqVolgende('argumentatie')" disabled>Volgende</button><span class="quiz-score" id="mq-argumentatie-score"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-panel" id="lezen-vd-quiz-lezen">
+        <div class="quiz-wrapper"><div class="quiz-title"><span class="skill-icon sz-nav nav-logo-lezen" style="vertical-align:middle;margin-right:8px"></span> Quiz: Leesvaardigheid</div><div id="quiz-lezen-container"></div></div>
+      </div>
+    </div><!-- /groep argumentatie -->
+
+  </div>
+</div>
+
+<!-- SCHRIJFVAARDIGHEID -->
+<div class="section" id="section-schrijven">
+  <div class="section-header">
+    <div class="section-icon-wrap"><span class="skill-icon sz-sec sec-logo-schrijven"></span></div>
+    <div>
+      <h2><span>Schrijf</span>vaardigheid</h2>
+      <p>Van idee tot eindtekst: leer hoe je goed gestructureerde teksten schrijft.</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="toonTab('schrijven','schrijfdoel',this)">🎯 Doel & Publiek</button>
+      <button class="sub-tab" onclick="toonTab('schrijven','opbouw',this)">🏗️ Tekstopbouw</button>
+      <button class="sub-tab" onclick="toonTab('schrijven','alinea-schrijven',this)">📝 Alinea's</button>
+      <button class="sub-tab" onclick="toonTab('schrijven','stijl',this)">✨ Stijl & Formuleren</button>
+      <button class="sub-tab" onclick="toonTab('schrijven','argumenteren',this)">💪 Argumenteren</button>
+      <button class="sub-tab" onclick="toonTab('schrijven','reviseren',this)">🔍 Reviseren</button>
+      <button class="sub-tab" onclick="toonTab('schrijven','quiz-schrijven',this)">🎯 Quiz</button>
+    </div>
+    <div class="content-panel active" id="schrijven-schrijfdoel">
+      <h3 class="onderdeel-titel">🎯 Schrijfdoel & Publiek</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>📢 Informeren</h4><p>Je wilt feiten overbrengen. Gebruik heldere, neutrale taal.</p></div>
+        <div class="card"><h4>💬 Overtuigen</h4><p>Je wilt de lezer van iets overtuigen. Gebruik argumenten.</p></div>
+        <div class="card"><h4>📋 Instrueren</h4><p>Je wilt uitleggen hoe iets werkt. Gebruik stappen.</p></div>
+        <div class="card"><h4>😊 Amuseren</h4><p>Je wilt plezier geven. Gebruik humor of een boeiend verhaal.</p></div>
+      </div>
+      <div class="uitleg-blok"><h4>Publiek bepaalt je stijl</h4><ul><li><strong>Formeel:</strong> voor leraren, bedrijven → geen straattaal, gebruik u/uw</li><li><strong>Informeel:</strong> voor vrienden → ontspannen taal</li></ul></div>
+    </div>
+    <div class="content-panel" id="schrijven-opbouw">
+      <h3 class="onderdeel-titel">🏗️ Tekstopbouw</h3>
+      <div class="stappenplan">
+        <div class="stap"><div class="stap-nr">1</div><div class="stap-inhoud"><h5>Inleiding</h5><p>Trek de aandacht. Introduceer het onderwerp. Eindig soms met je standpunt.</p></div></div>
+        <div class="stap"><div class="stap-nr">2</div><div class="stap-inhoud"><h5>Kern (meerdere alinea's)</h5><p>Werk het onderwerp uit. Elke alinea behandelt één aspect.</p></div></div>
+        <div class="stap"><div class="stap-nr">3</div><div class="stap-inhoud"><h5>Slot</h5><p>Vat samen. Trek een conclusie. Sluit af met een krachtige eindgedachte.</p></div></div>
+      </div>
+      <div class="tip-blok"><div class="tip-icon">📐</div><div><strong>Verhoudingen:</strong> Inleiding ±10% – Kern ±80% – Slot ±10% van de totale lengte.</div></div>
+    </div>
+    <div class="content-panel" id="schrijven-alinea-schrijven">
+      <h3 class="onderdeel-titel">📝 Alinea's schrijven</h3>
+      <div class="uitleg-blok"><h4>Een goede alinea heeft</h4><ul><li>Een duidelijke <strong>kernzin</strong></li><li>Gaat over <strong>één</strong> onderwerp</li><li>Bevat uitleg, voorbeelden of bewijs</li><li>Is verbonden via signaalwoorden</li></ul></div>
+      <div class="voorbeeld"><div class="voorbeeld-label">✏️ Voorbeeldalinea</div><div class="tekst"><span style="background:#dbeafe;padding:2px 4px;border-radius:4px">[Kernzin]</span> Sporten heeft voordelen voor je mentale gezondheid. <span style="background:#d1fae5;padding:2px 4px;border-radius:4px">[Uitleg]</span> Je maakt endorfines aan die stress verminderen. <span style="background:#fef3c7;padding:2px 4px;border-radius:4px">[Voorbeeld]</span> Hardlopers voelen zich energieker en positiever.</div></div>
+      <div class="fout-blok"><h4>⚠️ Veelgemaakte fouten</h4><ul><li>Twee onderwerpen in één alinea</li><li>Geen kernzin</li><li>Geen signaalwoorden</li></ul></div>
+    </div>
+    <div class="content-panel" id="schrijven-stijl">
+      <h3 class="onderdeel-titel">✨ Stijl & Formuleren</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>🎯 Duidelijkheid</h4><p>Schrijf begrijpelijk. Gebruik korte zinnen.</p></div>
+        <div class="card"><h4>📏 Precisie</h4><p>Kies het juiste woord. Vermijd "iets", "dingen", "enzo".</p></div>
+        <div class="card"><h4>🔀 Variatie</h4><p>Wissel lange en korte zinnen af.</p></div>
+        <div class="card"><h4>🔗 Samenhang</h4><p>Gebruik signaalwoorden en verwijswoorden.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="schrijven-argumenteren">
+      <h3 class="onderdeel-titel">💪 Argumenteren</h3>
+      <div class="stappenplan">
+        <div class="stap"><div class="stap-nr">1</div><div class="stap-inhoud"><h5>Formuleer je standpunt</h5><p>Wees duidelijk en stellig. "Ik vind dat..."</p></div></div>
+        <div class="stap"><div class="stap-nr">2</div><div class="stap-inhoud"><h5>Zoek sterke argumenten</h5><p>Gebruik feiten, cijfers en voorbeelden. Elke alinea = één argument.</p></div></div>
+        <div class="stap"><div class="stap-nr">3</div><div class="stap-inhoud"><h5>Weerleg tegenargumenten</h5><p>Noem het sterkste tegenargument en leg uit waarom jouw standpunt toch klopt.</p></div></div>
+        <div class="stap"><div class="stap-nr">4</div><div class="stap-inhoud"><h5>Krachtig slot</h5><p>Herhaal je standpunt. Sluit af met een oproep.</p></div></div>
+      </div>
+    </div>
+    <div class="content-panel" id="schrijven-reviseren">
+      <h3 class="onderdeel-titel">🔍 Reviseren</h3>
+      <div class="uitleg-blok"><h4>✅ Revisierchecklist</h4><ul class="checklist"><li>Is mijn hoofdgedachte duidelijk?</li><li>Heeft mijn tekst inleiding, kern en slot?</li><li>Heeft elke alinea een kernzin?</li><li>Gebruik ik signaalwoorden?</li><li>Is mijn taal formeel genoeg?</li><li>Heb ik de spelling gecontroleerd?</li></ul></div>
+      <div class="tip-blok"><div class="tip-icon">👁️</div><div><strong>Tip:</strong> Lees je tekst hardop voor. Waar je struikelt, is de zin te lang of onduidelijk.</div></div>
+    </div>
+    <div class="content-panel" id="schrijven-quiz-schrijven">
+      <div class="quiz-wrapper"><div class="quiz-title">🎯 Quiz: Schrijfvaardigheid</div><div id="quiz-schrijven-container"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SPREEKVAARDIGHEID -->
+<div class="section" id="section-spreken">
+  <div class="section-header">
+    <div class="section-icon-wrap"><span class="skill-icon sz-sec sec-logo-spreken"></span></div>
+    <div>
+      <h2><span>Spreek</span>vaardigheid</h2>
+      <p>Leer overtuigend presenteren met een goede structuur, stemgebruik en lichaamstaal.</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="toonTab('spreken','voorbereiding',this)">📋 Voorbereiding</button>
+      <button class="sub-tab" onclick="toonTab('spreken','structuur-spreek',this)">🏗️ Structuur</button>
+      <button class="sub-tab" onclick="toonTab('spreken','stemgebruik',this)">🎵 Stemgebruik</button>
+      <button class="sub-tab" onclick="toonTab('spreken','lichaamstaal',this)">🧍 Lichaamstaal</button>
+      <button class="sub-tab" onclick="toonTab('spreken','tips-spreken',this)">💡 Tips</button>
+    </div>
+    <div class="content-panel active" id="spreken-voorbereiding">
+      <h3 class="onderdeel-titel">📋 Voorbereiding</h3>
+      <div class="stappenplan">
+        <div class="stap"><div class="stap-nr">1</div><div class="stap-inhoud"><h5>Kies je onderwerp & spreekdoel</h5><p>Wat wil je bereiken? Wie is je publiek?</p></div></div>
+        <div class="stap"><div class="stap-nr">2</div><div class="stap-inhoud"><h5>Verzamel informatie</h5><p>Zoek feiten, cijfers en voorbeelden.</p></div></div>
+        <div class="stap"><div class="stap-nr">3</div><div class="stap-inhoud"><h5>Maak een sprekersplan</h5><p>Schrijf de structuur op met steekwoorden, geen volledige zinnen!</p></div></div>
+        <div class="stap"><div class="stap-nr">4</div><div class="stap-inhoud"><h5>Oefen, oefen, oefen</h5><p>Oefen hardop, bij voorkeur voor een spiegel. Let op je tijd.</p></div></div>
+      </div>
+    </div>
+    <div class="content-panel" id="spreken-structuur-spreek">
+      <h3 class="onderdeel-titel">🏗️ Structuur presentatie</h3>
+      <div class="uitleg-blok"><h4>Inleiding – Kern – Slot</h4><ul><li><strong>Inleiding:</strong> pakkende openingszin, introduceer onderwerp</li><li><strong>Kern:</strong> maximaal 3-4 hoofdpunten met uitleg en voorbeeld</li><li><strong>Slot:</strong> samenvatting, krachtige eindgedachte of oproep</li></ul></div>
+      <div class="voorbeeld"><div class="voorbeeld-label">✏️ Goede openingszin</div><div class="tekst">"Hoeveel uur per dag kijk jij op je telefoon? Uit onderzoek blijkt dat de gemiddelde tiener 6 uur per dag scrolt. Vandaag vertel ik waarom dit een probleem is én wat je eraan kunt doen."</div></div>
+    </div>
+    <div class="content-panel" id="spreken-stemgebruik">
+      <h3 class="onderdeel-titel">🎵 Stemgebruik</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>🔊 Volume</h4><p>Spreek zo luid dat iedereen je kan horen. Varieer je volume.</p></div>
+        <div class="card"><h4>⏱️ Tempo</h4><p>Niet te snel, niet te langzaam. Maak pauzes na kernpunten.</p></div>
+        <div class="card"><h4>🎶 Intonatie</h4><p>Varieer je toon. Eentonig spreken is saai. Benadruk sleutelwoorden.</p></div>
+        <div class="card"><h4>✨ Uitspraak</h4><p>Articuleer duidelijk. Zorg dat eindletters hoorbaar zijn.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="spreken-lichaamstaal">
+      <h3 class="onderdeel-titel">🧍 Lichaamstaal</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>👁️ Oogcontact</h4><p>Kijk je publiek aan. Verdeel je blik over de ruimte.</p></div>
+        <div class="card"><h4>🧍 Houding</h4><p>Sta rechtop. Niet wiegen. Straal zelfvertrouwen uit.</p></div>
+        <div class="card"><h4>🙌 Gebaren</h4><p>Gebruik je handen om punten te onderstrepen.</p></div>
+        <div class="card"><h4>😊 Gezichtsuitdrukking</h4><p>Lach! Enthousiasme is besmettelijk.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="spreken-tips-spreken">
+      <h3 class="onderdeel-titel">💡 10 Gouden regels</h3>
+      <div class="uitleg-blok"><ul class="checklist"><li>Begin sterk – eerste 30 seconden zijn cruciaal</li><li>Gebruik steekwoorden, geen volledige tekst</li><li>Maak oogcontact met je publiek</li><li>Spreek luid en duidelijk</li><li>Maak bewuste pauzes</li><li>Gebruik concrete voorbeelden en cijfers</li><li>Sluit af met een krachtige eindzin</li><li>Oefen minimaal drie keer hardop</li><li>Ken je stof goed</li><li>Wees jezelf</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- LUISTERVAARDIGHEID -->
+<div class="section" id="section-luisteren">
+  <div class="section-header">
+    <div class="section-icon-wrap"><span class="skill-icon sz-sec sec-logo-luisteren"></span></div>
+    <div>
+      <h2><span>Luister</span>vaardigheid</h2>
+      <p>Luister gericht, onderscheid hoofd- en bijzaken en maak goede aantekeningen.</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="toonTab('luisteren','luisterstrategieen',this)">📡 Strategieën</button>
+      <button class="sub-tab" onclick="toonTab('luisteren','begrijpen-luister',this)">🧠 Begrijpen</button>
+      <button class="sub-tab" onclick="toonTab('luisteren','aantekeningen',this)">📝 Aantekeningen</button>
+      <button class="sub-tab" onclick="toonTab('luisteren','sprekersdoel',this)">🎯 Sprekersdoel</button>
+    </div>
+    <div class="content-panel active" id="luisteren-luisterstrategieen">
+      <h3 class="onderdeel-titel">📡 Luisterstrategieën</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>🌐 Globaal luisteren</h4><p>Waar gaat het over? Wat is de hoofdgedachte?</p></div>
+        <div class="card"><h4>🔍 Intensief luisteren</h4><p>Let op alle details, argumenten en nuances.</p></div>
+        <div class="card"><h4>🎯 Zoekend luisteren</h4><p>Luister gericht naar een specifiek gegeven.</p></div>
+        <div class="card"><h4>❤️ Empathisch luisteren</h4><p>Begrijp de gevoelens en bedoelingen van de spreker.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="luisteren-begrijpen-luister">
+      <h3 class="onderdeel-titel">🧠 Hoofdzaken begrijpen</h3>
+      <div class="uitleg-blok"><h4>Hoe herken je de hoofdgedachte?</h4><ul><li>De spreker benadrukt bepaalde woorden</li><li>Hij/zij herhaalt iets → waarschijnlijk belangrijk!</li><li>Na een pauze komt vaak een kernpunt</li><li>De intro en het slot bevatten bijna altijd de hoofdgedachte</li></ul></div>
+    </div>
+    <div class="content-panel" id="luisteren-aantekeningen">
+      <h3 class="onderdeel-titel">📝 Aantekeningen maken</h3>
+      <div class="uitleg-blok"><h4>Technieken</h4><ul><li><strong>Kernwoorden:</strong> schrijf alleen sleutelwoorden</li><li><strong>Afkortingen:</strong> verzin eigen afkortingen</li><li><strong>Visueel:</strong> gebruik pijlen en symbolen</li><li><strong>Structuur:</strong> gebruik inspringing voor hoofd/subpunten</li></ul></div>
+      <div class="voorbeeld"><div class="voorbeeld-label">✏️ Voorbeeld aantekeningen</div><div class="tekst" style="font-family:monospace;font-size:0.83rem;line-height:1.8">🌍 Klimaatverandering → probl.<br>&nbsp;&nbsp;• temp ↑ 1,5°C<br>&nbsp;&nbsp;• ijskappen smelten → zeespiegel ↑<br>&nbsp;&nbsp;• oorzaak: CO₂ industrie<br>Conc: actie nodig = NU</div></div>
+    </div>
+    <div class="content-panel" id="luisteren-sprekersdoel">
+      <h3 class="onderdeel-titel">🎯 Sprekersdoel herkennen</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>📢 Informeren</h4><p>Neutrale toon, feiten. <em>"Vandaag vertel ik jullie over..."</em></p></div>
+        <div class="card"><h4>💬 Overtuigen</h4><p>Standpunten en argumenten. <em>"Ik vind dat..."</em></p></div>
+        <div class="card"><h4>📋 Instrueren</h4><p>Stappen en volgorde. <em>"Als eerste... vervolgens..."</em></p></div>
+        <div class="card"><h4>😊 Amuseren</h4><p>Humor en verhalen. <em>"Er was eens..."</em></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GESPREKSVAARDIGHEID -->
+<div class="section" id="section-gesprekken">
+  <div class="section-header">
+    <div class="section-icon-wrap"><span class="skill-icon sz-sec sec-logo-gesprekken"></span></div>
+    <div>
+      <h2><span>Gesprekken</span> voeren</h2>
+      <p>Leer luisteren, reageren, doorvragen en je standpunt verwoorden.</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="toonTab('gesprekken','gespreksregels',this)">📜 Basisvaardigheden</button>
+      <button class="sub-tab" onclick="toonTab('gesprekken','discussie',this)">⚡ Discussie & Debat</button>
+      <button class="sub-tab" onclick="toonTab('gesprekken','samenwerken',this)">🤝 Overleg</button>
+    </div>
+    <div class="content-panel active" id="gesprekken-gespreksregels">
+      <h3 class="onderdeel-titel">📜 Basisvaardigheden</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>🎤 Beurt nemen</h4><p>Wacht tot de ander klaar is. Gebruik verbale signalen.</p></div>
+        <div class="card"><h4>👂 Actief luisteren</h4><p>Knik, maak oogcontact, reageer op de ander.</p></div>
+        <div class="card"><h4>❓ Doorvragen</h4><p>"Kun je dat uitleggen?", "Wat bedoel je precies?"</p></div>
+        <div class="card"><h4>🔄 Reageren</h4><p>Reageer op de inhoud. Erken de ander eerst.</p></div>
+      </div>
+      <div class="uitleg-blok"><h4>Handige formuleringen</h4><ul><li><strong>Instemmen:</strong> "Ik ben het eens met..., omdat..."</li><li><strong>Tegenspreken:</strong> "Ik ben het daar niet mee eens, want..."</li><li><strong>Aanvullen:</strong> "Ik wil daar nog iets aan toevoegen..."</li><li><strong>Doorvragen:</strong> "Kun je een voorbeeld geven?"</li></ul></div>
+    </div>
+    <div class="content-panel" id="gesprekken-discussie">
+      <h3 class="onderdeel-titel">⚡ Discussie & Debat</h3>
+      <div class="uitleg-blok"><h4>Discussie vs. Debat</h4><ul><li><strong>Discussie:</strong> open gesprek, meerdere standpunten, doel: inzicht</li><li><strong>Debat:</strong> gestructureerd, twee teams, vaste regels en rollen</li></ul></div>
+      <div class="cards-grid">
+        <div class="card"><h4>🏁 Stelling</h4><p>Een bewering die pro of contra verdedigd wordt.</p></div>
+        <div class="card"><h4>🔵 Pro (voor)</h4><p>Verdedigt de stelling.</p></div>
+        <div class="card"><h4>🔴 Contra (tegen)</h4><p>Bestrijdt de stelling.</p></div>
+        <div class="card"><h4>⚖️ Voorzitter</h4><p>Bewaakt de orde en de tijd.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="gesprekken-samenwerken">
+      <h3 class="onderdeel-titel">🤝 Overleg & Samenwerken</h3>
+      <div class="uitleg-blok"><h4>Goed overleggen</h4><ul class="checklist"><li>Zorg dat iedereen aan het woord komt</li><li>Luister zonder direct te oordelen</li><li>Bouw voort op elkaars voorstellen</li><li>Maak concrete afspraken</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- TAALBASIS -->
+<div class="section" id="section-taalbasis">
+  <div class="section-header">
+    <div class="section-icon-wrap"><div class="section-icon-fallback">🔤</div></div>
+    <div>
+      <h2><span>Taal</span>basis</h2>
+      <p>Grammatica, woordsoorten, zinsdelen en formuleren.</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="toonTab('taalbasis','woordsoorten',this)">📦 Woordsoorten</button>
+      <button class="sub-tab" onclick="toonTab('taalbasis','zinsdelen',this)">🏗️ Zinsdelen</button>
+      <button class="sub-tab" onclick="toonTab('taalbasis','werkwoorden',this)">⚙️ Werkwoorden</button>
+      <button class="sub-tab" onclick="toonTab('taalbasis','formuleren',this)">✨ Formuleren</button>
+      <button class="sub-tab" onclick="toonTab('taalbasis','quiz-taal',this)">🎯 Quiz</button>
+    </div>
+    <div class="content-panel active" id="taalbasis-woordsoorten">
+      <h3 class="onderdeel-titel">📦 Woordsoorten</h3>
+      <table class="sw-tabel">
+        <tr><th>Woordsoort</th><th>Definitie</th><th>Voorbeelden</th></tr>
+        <tr><td><span class="badge">Zelfstandig nw.</span></td><td>Naam van persoon, dier, ding of begrip</td><td>hond, tafel, vrijheid</td></tr>
+        <tr><td><span class="badge">Werkwoord</span></td><td>Handeling, toestand of proces</td><td>lopen, zijn, denken</td></tr>
+        <tr><td><span class="badge">Bijvoeglijk nw.</span></td><td>Eigenschap van een zelfstandig nw.</td><td>groot, blauw, snel</td></tr>
+        <tr><td><span class="badge">Voornaamwoord</span></td><td>Vervangt een zelfstandig nw.</td><td>ik, jij, hij, dit</td></tr>
+        <tr><td><span class="badge">Bijwoord</span></td><td>Meer informatie bij werkwoord of bijv. nw.</td><td>snel, gisteren, heel</td></tr>
+        <tr><td><span class="badge">Lidwoord</span></td><td>Staat voor een zelfstandig nw.</td><td>de, het, een</td></tr>
+        <tr><td><span class="badge">Voorzetsel</span></td><td>Relatie tussen woorden</td><td>op, in, voor, achter</td></tr>
+        <tr><td><span class="badge">Voegwoord</span></td><td>Verbindt zinnen of zinsdelen</td><td>en, maar, want, omdat</td></tr>
+      </table>
+    </div>
+    <div class="content-panel" id="taalbasis-zinsdelen">
+      <h3 class="onderdeel-titel">🏗️ Zinsdelen</h3>
+      <table class="sw-tabel">
+        <tr><th>Zinsdeel</th><th>Vraag</th><th>Voorbeeld</th></tr>
+        <tr><td><span class="badge">Onderwerp</span></td><td>Wie of wat + werkwoord?</td><td><em><u>De leraar</u> geeft uitleg.</em></td></tr>
+        <tr><td><span class="badge">Persoonsvorm</span></td><td>Welk werkwoord past bij het onderwerp?</td><td><em>De leraar <u>geeft</u> uitleg.</em></td></tr>
+        <tr><td><span class="badge">Lijdend voorwerp</span></td><td>Wie/wat + persoonsvorm + onderwerp?</td><td><em>Hij geeft <u>uitleg</u>.</em></td></tr>
+        <tr><td><span class="badge">Bijw. bepaling</span></td><td>Hoe? Waar? Wanneer?</td><td><em>Hij geeft uitleg <u>in de klas</u>.</em></td></tr>
+      </table>
+    </div>
+    <div class="content-panel" id="taalbasis-werkwoorden">
+      <h3 class="onderdeel-titel">⚙️ Werkwoorden & Spelling</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>👕 't Kofschip</h4><p>Stam eindigt op t,k,f,s,ch,p → verleden tijd: <strong>-te/-ten</strong>. Andere letters → <strong>-de/-den</strong>.</p></div>
+        <div class="card"><h4>🔄 dt-regel</h4><p>Niet-ik onderwerp → persoonsvorm krijgt <strong>-t</strong>. Inversie + ik → <strong>geen -t</strong>.<br><em>Hij loopt. / Loop ik?</em></p></div>
+      </div>
+      <div class="voorbeeld"><div class="voorbeeld-label">✏️ dt-regel</div><div class="tekst">✅ Hij <strong>loopt</strong> hard.<br>✅ Jij <strong>zingt</strong> mooi.<br>✅ <strong>Loop</strong> ik snel?<br>❌ <strong>Loopt</strong> ik snel? (FOUT)</div></div>
+    </div>
+    <div class="content-panel" id="taalbasis-formuleren">
+      <h3 class="onderdeel-titel">✨ Formuleren</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>❌ Vaag</h4><p>"Hij deed iets met bepaalde dingen om het te laten werken."</p></div>
+        <div class="card"><h4>✅ Precies</h4><p>"De technicus verving de kapotte onderdelen zodat het apparaat weer werkte."</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="taalbasis-quiz-taal">
+      <div class="quiz-wrapper"><div class="quiz-title">🎯 Quiz: Taalbasis</div><div id="quiz-taal-container"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TEKST & LITERATUUR -->
+<div class="section" id="section-literatuur">
+  <div class="section-header">
+    <div class="section-icon-wrap"><div class="section-icon-fallback">📚</div></div>
+    <div>
+      <h2>Tekst & <span>Literatuur</span></h2>
+      <p>Non-fictie, fictie, poëzie, beeldspraak en literaire begrippen.</p>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="toonTab('literatuur','nonfictie',this)">📰 Non-fictie</button>
+      <button class="sub-tab" onclick="toonTab('literatuur','fictie',this)">📖 Fictie & Verhalen</button>
+      <button class="sub-tab" onclick="toonTab('literatuur','poezie',this)">🎭 Poëzie</button>
+      <button class="sub-tab" onclick="toonTab('literatuur','beeldspraak',this)">🌈 Beeldspraak</button>
+      <button class="sub-tab" onclick="toonTab('literatuur','quiz-lit',this)">🎯 Quiz</button>
+    </div>
+    <div class="content-panel active" id="literatuur-nonfictie">
+      <h3 class="onderdeel-titel">📰 Non-fictie tekstsoorten</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>📰 Krantenartikel</h4><p>Beantwoordt de 6 W-vragen. Objectieve informatieverstrekking.</p></div>
+        <div class="card"><h4>💬 Column</h4><p>Kort opiniestuk. Subjectief, persoonlijk, soms humoristisch.</p></div>
+        <div class="card"><h4>📊 Betoog</h4><p>Één duidelijk standpunt met argumenten. Doel: overtuigen.</p></div>
+        <div class="card"><h4>📖 Essay</h4><p>Beschouwend: denkt hardop na over een onderwerp.</p></div>
+        <div class="card"><h4>👤 Biografie</h4><p>Levensverhaal van een echte persoon.</p></div>
+        <div class="card"><h4>📋 Handleiding</h4><p>Instructieve tekst: stap voor stap uitleg.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="literatuur-fictie">
+      <h3 class="onderdeel-titel">📖 Fictie & Verhalen</h3>
+      <div class="uitleg-blok"><h4>Verhaalelementen</h4><ul><li><strong>Personage:</strong> personen in het verhaal</li><li><strong>Verteller:</strong> ik-verteller of hij/zij-verteller?</li><li><strong>Setting:</strong> waar en wanneer?</li><li><strong>Plot:</strong> spanning → hoogtepunt → ontknoping</li><li><strong>Thema:</strong> de diepere boodschap</li></ul></div>
+      <div class="cards-grid">
+        <div class="card"><h4>📕 Roman</h4><p>Lang verhalend werk. Complexe personages.</p></div>
+        <div class="card"><h4>📗 Novelle</h4><p>Korter dan roman. Één hoofdplot.</p></div>
+        <div class="card"><h4>📄 Kort verhaal</h4><p>Compact. Eén situatie.</p></div>
+        <div class="card"><h4>🎭 Toneelstuk</h4><p>Geschreven om gespeeld te worden. Dialogen.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="literatuur-poezie">
+      <h3 class="onderdeel-titel">🎭 Poëzie</h3>
+      <div class="cards-grid">
+        <div class="card"><h4>🔤 Rijm</h4><p><strong>Eindrijm:</strong> roos – kloos<br><strong>Alliteratie:</strong> Bram brak brood</p></div>
+        <div class="card"><h4>⚡ Ritme & Metrum</h4><p>Klemtoonpatroon in het gedicht.</p></div>
+        <div class="card"><h4>📏 Strofe & Regel</h4><p>Een strofe bestaat uit versregels.</p></div>
+        <div class="card"><h4>🔍 Analyse</h4><p>Kijk naar: thema, toon, woordkeuze, rijm, ritme, beeldspraak.</p></div>
+      </div>
+    </div>
+    <div class="content-panel" id="literatuur-beeldspraak">
+      <h3 class="onderdeel-titel">🌈 Beeldspraak & Stijlfiguren</h3>
+      <table class="sw-tabel">
+        <tr><th>Stijlfiguur</th><th>Uitleg</th><th>Voorbeeld</th></tr>
+        <tr><td><span class="badge">Vergelijking</span></td><td>A lijkt op B (met als/zoals)</td><td>"Hij rent zoals een cheetah."</td></tr>
+        <tr><td><span class="badge">Metafoor</span></td><td>A ís B (zonder vergelijkingswoord)</td><td>"Hij is een cheetah."</td></tr>
+        <tr><td><span class="badge">Personificatie</span></td><td>Niet-menselijk krijgt menselijke eigenschappen</td><td>"De wind fluisterde."</td></tr>
+        <tr><td><span class="badge">Hyperbool</span></td><td>Overdrijving voor effect</td><td>"Een miljoen keer gevraagd!"</td></tr>
+        <tr><td><span class="badge">Ironie</span></td><td>Tegenovergestelde van wat je bedoelt</td><td>"Geweldig, weer een onvoldoende."</td></tr>
+        <tr><td><span class="badge">Alliteratie</span></td><td>Beginletters/-klanken herhalen</td><td>"Stille straten, stil stil stil."</td></tr>
+        <tr><td><span class="badge">Eufemisme</span></td><td>Nettere manier om iets te zeggen</td><td>"Hij is ontslapen." (= dood)</td></tr>
+      </table>
+    </div>
+    <div class="content-panel" id="literatuur-quiz-lit">
+      <div class="quiz-wrapper"><div class="quiz-title">🎯 Quiz: Tekst & Literatuur</div><div id="quiz-lit-container"></div></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end main-container -->
+
+<footer>
+  <span class="footer-logo"></span>
+  <strong>Taal Inside</strong> – Nederlands voor onderbouw mavo · havo · vwo<br>
+  <span style="font-size:0.78rem;opacity:0.6">Gebaseerd op de definitieve conceptkerndoelen Nederlands 2025 (SLO)</span>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
